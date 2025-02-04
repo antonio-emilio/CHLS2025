@@ -1,5 +1,5 @@
 $date
-     Feb 04, 2025       21:41:35
+     Feb 04, 2025       22:20:00
 $end
 
 $version
@@ -12,9 +12,11 @@ $end
 
 $scope module SystemC $end
 $var wire    1  aaaaa  clk       $end
-$var wire    1  aaaab  D       $end
-$var wire    1  aaaac  Q       $end
-$var wire    1  aaaad  QB       $end
+$var wire    8  aaaab  A_8b [7:0]  $end
+$var wire    8  aaaac  B_8b [7:0]  $end
+$var wire    1  aaaad  Cin       $end
+$var wire    8  aaaae  S_8b [7:0]  $end
+$var wire    1  aaaaf  Cout       $end
 $upscope $end
 $enddefinitions  $end
 
@@ -24,66 +26,67 @@ $end
 
 $dumpvars
 0aaaaa
-0aaaab
-0aaaac
+bXXXXXXXX aaaab
+bXXXXXXXX aaaac
 0aaaad
+b11111110 aaaae
+0aaaaf
 $end
 
 #10
 1aaaaa
-1aaaab
-1aaaad
+b0 aaaab
+b0 aaaac
 
 #15
 0aaaaa
 
 #20
 1aaaaa
-0aaaab
-1aaaac
-0aaaad
+b1 aaaab
+b1 aaaac
 
 #25
 0aaaaa
 
 #30
 1aaaaa
-1aaaab
-0aaaac
-1aaaad
+b1111 aaaab
 
 #35
 0aaaaa
 
 #40
 1aaaaa
-1aaaac
-0aaaad
+b11111111 aaaab
 
 #45
 0aaaaa
 
 #50
 1aaaaa
-0aaaab
+1aaaad
+b11111111 aaaae
 
 #55
 0aaaaa
 
 #60
 1aaaaa
-1aaaab
-0aaaac
-1aaaad
+b10101010 aaaab
+b1010101 aaaac
+0aaaad
+b11111110 aaaae
 
 #65
 0aaaaa
 
 #70
 1aaaaa
-0aaaab
-1aaaac
-0aaaad
+b11001100 aaaab
+b110011 aaaac
+1aaaad
+b11111111 aaaae
 
 #75
 0aaaaa

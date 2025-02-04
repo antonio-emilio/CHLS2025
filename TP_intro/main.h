@@ -2,37 +2,36 @@
 #define MAIN_H
 
 #include <systemc.h>
-#include "DFF.h"
-#include "DFF_stimuli.h"
+#include "ADD8b.h"
+#include "ADD8b_stimuli.h"
 
 SC_MODULE(Top)
 {
-  // Sinais
   sc_clock clk;
-  sc_signal<bool> D;
-  sc_signal<bool> Q;
-  sc_signal<bool> QB;
+  sc_signal<sc_lv<8>> A_8b, B_8b, S_8b;
+  sc_signal<bool> Cin, Cout;
 
-  // Instâncias do Flip-Flop e do módulo de estímulos
-  DFF dff1;
-  DFF_stimuli stimuli1;
+  ADD8b adder;
+  ADD8b_stimuli stimuli;
 
   void INIT();
 
   SC_CTOR(Top)
-    : clk("clk", 10, SC_NS, 0.5), // Clock com período de 10ns
-      D("D"), Q("Q"), QB("QB"),
-      dff1("dff1"), stimuli1("stimuli1")
+    : clk("clk", 10, SC_NS, 0.5),
+      A_8b("A_8b"), B_8b("B_8b"), S_8b("S_8b"),
+      Cin("Cin"), Cout("Cout"),
+      adder("adder"), stimuli("stimuli")
   {
-    // Conectar Flip-Flop D
-    dff1.CK(clk);
-    dff1.D(D);
-    dff1.Q(Q);
-    dff1.QB(QB);
+    adder.A_8b(A_8b);
+    adder.B_8b(B_8b);
+    adder.Cin(Cin);
+    adder.S_8b(S_8b);
+    adder.Cout(Cout);
 
-    // Conectar o módulo de estímulos
-    stimuli1.clk(clk);
-    stimuli1.D(D);
+    stimuli.clk(clk);
+    stimuli.A_8b(A_8b);
+    stimuli.B_8b(B_8b);
+    stimuli.Cin(Cin);
   }
 };
 

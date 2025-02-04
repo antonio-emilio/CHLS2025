@@ -1,45 +1,41 @@
 #include <systemc.h>
-#include "DFF.h"
-#include "DFF_stimuli.h"
+#include "ADD8b.h"
+#include "ADD8b_stimuli.h"
 
-int sc_main(int argc, char *argv[])
+int sc_main(int argc, char* argv[])
 {
   sc_trace_file *tf;
 
-  // Sinais
-  sc_signal<bool> D;
-  sc_signal<bool> Q;
-  sc_signal<bool> QB;
-  
-  sc_clock clk("clk", 10, SC_NS, 0.5, 10, SC_NS, true); // Clock de 10ns período
+  sc_signal<sc_lv<8>> A_8b, B_8b, S_8b;
+  sc_signal<bool> Cin, Cout;
+  sc_clock clk("clk", 10, SC_NS, 0.5, 10, SC_NS, true);
 
-  // Instanciando o Flip-Flop D e os estímulos
-  DFF dff1("dff1");
-  DFF_stimuli stimuli1("stimuli1");
+  ADD8b adder("adder");
+  ADD8b_stimuli stimuli("stimuli");
 
-  // Conectando os sinais
-  dff1.CK(clk);
-  dff1.D(D);
-  dff1.Q(Q);
-  dff1.QB(QB);
+  adder.A_8b(A_8b);
+  adder.B_8b(B_8b);
+  adder.Cin(Cin);
+  adder.S_8b(S_8b);
+  adder.Cout(Cout);
 
-  stimuli1.clk(clk);
-  stimuli1.D(D);
+  stimuli.clk(clk);
+  stimuli.A_8b(A_8b);
+  stimuli.B_8b(B_8b);
+  stimuli.Cin(Cin);
 
-  // Criando o arquivo de ondas
   tf = sc_create_vcd_trace_file("waves");
   tf->set_time_unit(1, SC_NS);
   
   sc_trace(tf, clk, "clk");
-  sc_trace(tf, D, "D");
-  sc_trace(tf, Q, "Q");
-  sc_trace(tf, QB, "QB");
+  sc_trace(tf, A_8b, "A_8b");
+  sc_trace(tf, B_8b, "B_8b");
+  sc_trace(tf, Cin, "Cin");
+  sc_trace(tf, S_8b, "S_8b");
+  sc_trace(tf, Cout, "Cout");
 
-  // Iniciando a simulação
-  sc_start(500, SC_NS);
-  
-  // Fechando o arquivo de ondas
+  sc_start(100, SC_NS);
   sc_close_vcd_trace_file(tf);
-  
+
   return 0;
 }
