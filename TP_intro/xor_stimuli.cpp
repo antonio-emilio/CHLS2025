@@ -1,8 +1,6 @@
-#include "nand_stimuli.h"
+#include "xor_stimuli.h"
 
-
-
-void Nand_stimuli::stim()
+void Xor_stimuli::stim()
 {
   wait();
   s1 = 1;

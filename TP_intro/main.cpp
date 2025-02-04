@@ -10,8 +10,8 @@
 /* fichier main.cpp */
 
 #include <systemc.h>
-#include "nand.h"
-#include "nand_stimuli.h"
+#include "xor.h"
+#include "xor_stimuli.h"
 int sc_main(int ac, char *av[])
 {
   sc_trace_file *tf;
@@ -20,13 +20,13 @@ int sc_main(int ac, char *av[])
   sc_signal<bool> in2;
   sc_signal<bool> out1;
   // instanciate
-  Nand nand1("nand1");
-  Nand_stimuli stimuli1("stimuli1");
+  Xor xor1("xor1");
+  Xor_stimuli stimuli1("stimuli1");
   sc_clock clk ("ID", 10, SC_NS, 0.5, 10, SC_NS, true);
   // link
-  nand1.A(in1);
-  nand1.B(in2);
-  nand1.S(out1);
+  xor1.C(in1);
+  xor1.D(in2);
+  xor1.O(out1);
   stimuli1.clk(clk);
   stimuli1.s1(in1);
   stimuli1.s2(in2);

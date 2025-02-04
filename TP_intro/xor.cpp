@@ -1,7 +1,5 @@
-#include "nand.h"
+#include "xor.h"
 
-void Nand::comportement(){
-
-  S = !(A&&B);
+void Xor::comportement(){
 
 }

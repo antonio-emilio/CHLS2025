@@ -1,5 +1,5 @@
-#include "nand.h"
-#include "nand_stimuli.h"
+#include "xor.h"
+#include "xor_stimuli.h"
 SC_MODULE (Top) {
   // signals
  
@@ -9,8 +9,8 @@ SC_MODULE (Top) {
   sc_signal<bool> out1;
 
   // instanciate
-  Nand nand1;
-  Nand_stimuli stimuli1;
+  Xor xor1;
+  Xor_stimuli stimuli1;
 
   void INIT();
   SC_CTOR(Top)
@@ -18,12 +18,12 @@ SC_MODULE (Top) {
     in1 ("in1"),
     in2 ("in2"),
     out1 ("out1"),
-    nand1 ("nand1"),
+    xor1 ("xor1"),
     stimuli1("STIMULI")
       {
-	nand1.A(in1);
-	nand1.B(in2);
-	nand1.S(out1);
+	xor1.C(in1);
+	xor1.D(in2);
+	xor1.O(out1);
 	stimuli1.clk(clk);
 	stimuli1.s1(in1);
 	stimuli1.s2(in2);

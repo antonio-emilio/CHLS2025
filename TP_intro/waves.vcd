@@ -1,9 +1,9 @@
 $date
-     Feb 04, 2025       13:58:17
+     Feb 04, 2025       20:55:05
 $end
 
 $version
- SystemC 2.3.3-Accellera --- Jun  7 2022 13:10:00
+ SystemC 3.0.1-Accellera --- Feb  4 2025 19:09:07
 $end
 
 $timescale
@@ -26,12 +26,13 @@ $dumpvars
 0aaaaa
 0aaaab
 0aaaac
-1aaaad
+0aaaad
 $end
 
 #10
 1aaaaa
 1aaaab
+1aaaad
 
 #15
 0aaaaa
@@ -55,6 +56,7 @@ $end
 #40
 1aaaaa
 0aaaac
+0aaaad
 
 #45
 0aaaaa
@@ -63,7 +65,6 @@ $end
 1aaaaa
 1aaaab
 1aaaac
-0aaaad
 
 #55
 0aaaaa
@@ -79,6 +80,7 @@ $end
 #70
 1aaaaa
 0aaaab
+0aaaad
 
 #75
 0aaaaa
