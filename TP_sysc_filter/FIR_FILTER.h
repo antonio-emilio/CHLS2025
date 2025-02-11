@@ -52,7 +52,11 @@ SC_MODULE (top_level) {
 				//cerr<<"filtered value ="<<acc<<endl;
 				data_out.write(acc);
 				valid_out.write(true);
+
+				
+
 			}
+			
 			else if(new_sample&&!valid_in.read()){//on the current sample, valid_in went from high to low
 				//cerr<<"waiting for sample"<<endl;
 				new_sample=false; //the process will wait for a new rising edge of valid_in
