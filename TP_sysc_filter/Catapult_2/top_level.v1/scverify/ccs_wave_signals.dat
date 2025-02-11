@@ -1,0 +1,6 @@
+RADIX hex
+CDEBUG 0
+DEBUGVARS {}
+WAVELIST {{DUT {} clk clk {}} {DUT {} rst rst {}} {DUT {} data_in data_in {}} {DUT {} valid_in valid_in {}} {DUT {} coeffs_0 coeffs_0 {}} {DUT {} coeffs_1 coeffs_1 {}} {DUT {} coeffs_2 coeffs_2 {}} {DUT {} coeffs_3 coeffs_3 {}} {DUT {} coeffs_4 coeffs_4 {}} {DUT {} coeffs_5 coeffs_5 {}} {DUT {} coeffs_6 coeffs_6 {}} {DUT {} coeffs_7 coeffs_7 {}} {DUT {} coeffs_8 coeffs_8 {}} {DUT {} coeffs_9 coeffs_9 {}} {DUT {} coeffs_10 coeffs_10 {}} {DUT {} coeffs_11 coeffs_11 {}} {DUT {} coeffs_12 coeffs_12 {}} {DUT {} coeffs_13 coeffs_13 {}} {DUT {} coeffs_14 coeffs_14 {}} {DUT {} coeffs_15 coeffs_15 {}} {DUT {} data_out data_out {}} {DUT {} valid_out valid_out {}}}
+DUTINST top_level
+STALL_CTRLS_ADDED 1

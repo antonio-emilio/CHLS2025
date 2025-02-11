@@ -1,0 +1,24 @@
+//  Catapult Ultra Synthesis 2022.2_1/1019737 (Production Release) Mon Nov 21 20:05:27 PST 2022
+//  
+//          Copyright (c) Siemens EDA, 1996-2022, All Rights Reserved.
+//                        UNPUBLISHED, LICENSED SOFTWARE.
+//             CONFIDENTIAL AND PROPRIETARY INFORMATION WHICH IS THE
+//                   PROPERTY OF SIEMENS EDA OR ITS LICENSORS.
+//  
+//  Running on Linux HLS_student@localhost.localdomain 3.10.0-1160.el7.x86_64 x86_64 aol
+//  
+//  Package information: SIFLIBS v25.2_1.0, HLS_PKGS v25.2_1.0, 
+//                       SIF_TOOLKITS v25.2_1.0, SIF_XILINX v25.2_1.0, 
+//                       SIF_ALTERA v25.2_1.0, CCS_LIBS v25.2_1.0, 
+//                       CDS_PPRO v2022.1, CDS_DesigChecker v2022.2, 
+//                       CDS_OASYS v21.1_2.5, CDS_PSR v22.1_0.5, 
+//                       DesignPad v2.78_1.0
+//  
+if {[info script] != {} && [file isdirectory [file rootname [info script]]]} {
+  project load [file rootname [info script]] 2022.2
+} elseif { [file isdirectory /mnt/campux/github/CHLS2025/TP_sysc_filter/Catapult] } {
+  project load /mnt/campux/github/CHLS2025/TP_sysc_filter/Catapult 2022.2
+} else {
+  error {unable to locate project directory 'Catapult'}
+}
+

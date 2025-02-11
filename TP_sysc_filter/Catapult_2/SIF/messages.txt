@@ -1,0 +1,21 @@
+
+# Messages from "go new"
+
+
+# Messages from "go analyze"
+
+flow package require /SCVerify
+10.4
+solution file add [file join $sfd FIR_FILTER.h] -type C++
+/INPUTFILES/1
+solution file add [file join $sfd sc_main.cpp] -type C++ -exclude true
+/INPUTFILES/2
+go analyze
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+Creating project directory '/mnt/campux/github/CHLS2025/TP_sysc_filter/Catapult_2/'. (PRJ-1)
+Front End called with arguments: -I/usr/local/bin/Siemens_EDA/Catapult_Synthesis_2022.2_1-1019737/Mgc_home/shared/include -- /mnt/campux/github/CHLS2025/TP_sysc_filter/FIR_FILTER.h (CIN-69)
+Edison Design Group C++/C Front End - Version 6.3 (CIN-1)
+# Warning: Command-line warning #1819-D: "/usr/local/bin/Siemens_EDA/Catapult_Synthesis_2022.2_1-1019737/Mgc_home/shared/include" was specified as both a system and non-system include directory -- the non-system entry will be ignored ()
+Pragma 'hls_design<top>' detected on class 'top_level' (CIN-6)
+Source file analysis completed (CIN-68)
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 7.86 seconds, memory usage 1582884kB, peak memory usage 1648420kB (SOL-9)

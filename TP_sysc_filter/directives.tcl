@@ -30,7 +30,7 @@ go assembly
 
 directive set /top_level/FIR_FILTER/while -PIPELINE_INIT_INTERVAL 1
 directive set /top_level/FIR_FILTER/while/SHIFT -UNROLL yes
-directive set /top_level/FIR_FILTER/while/MAC -UNROLL yes
+directive set /top_level/FIR_FILTER/while/MAC -UNROLL 2
 go extract
 
 flow run /SCVerify/launch_make ./scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim sim
