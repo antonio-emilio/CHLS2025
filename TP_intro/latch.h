@@ -4,24 +4,13 @@
 
 SC_MODULE(Latch)
 {
- public:
-  sc_in<bool> E, D; // E = Enable (ou Clock para Flip-Flop), D = Entrada
-  sc_out<bool> Q, QB; // Saídas Q e Qn
-
+  sc_in<bool> D, E;
+  sc_out<bool> Q, QB;
+  void COMPORTEMENT();
   SC_CTOR(Latch)
   {
-    SC_METHOD(comportement);
+    SC_METHOD(COMPORTEMENT);
     sensitive << E << D;
-  }
-
- private:
-  void comportement()
-  {
-    if (E.read() == 1) // Quando habilitado, Q recebe D
-    {
-      Q.write(D.read());
-      QB.write(!D.read());
-    }
   }
 };
 
