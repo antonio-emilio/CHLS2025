@@ -1,0 +1,12 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Conta/Documents/GitHub/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_0_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Conta/Documents/GitHub/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/ip/clk_wiz_0/clk_wiz_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Conta/Documents/GitHub/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/audio_init.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module audio_init
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Conta/Documents/GitHub/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/debounce.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module debounce
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Conta/Documents/GitHub/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/audioProc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module audioProc
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Conta/Documents/GitHub/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/proj/AudioProc.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

@@ -1,23 +1,22 @@
+
 // file: clk_wiz_0.v
-// 
-// (c) Copyright 2008 - 2013 Xilinx, Inc. All rights reserved.
-// 
+// (c) Copyright 2017-2018, 2023 Advanced Micro Devices, Inc. All rights reserved.
+//
 // This file contains confidential and proprietary information
-// of Xilinx, Inc. and is protected under U.S. and
-// international copyright and other intellectual property
-// laws.
-// 
+// of AMD and is protected under U.S. and international copyright
+// and other intellectual property laws.
+//
 // DISCLAIMER
 // This disclaimer is not a license and does not grant any
 // rights to the materials distributed herewith. Except as
 // otherwise provided in a valid license issued to you by
-// Xilinx, and to the maximum extent permitted by applicable
+// AMD, and to the maximum extent permitted by applicable
 // law: (1) THESE MATERIALS ARE MADE AVAILABLE "AS IS" AND
-// WITH ALL FAULTS, AND XILINX HEREBY DISCLAIMS ALL WARRANTIES
+// WITH ALL FAULTS, AND AMD HEREBY DISCLAIMS ALL WARRANTIES
 // AND CONDITIONS, EXPRESS, IMPLIED, OR STATUTORY, INCLUDING
 // BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, NON-
 // INFRINGEMENT, OR FITNESS FOR ANY PARTICULAR PURPOSE; and
-// (2) Xilinx shall not be liable (whether in contract or tort,
+// (2) AMD shall not be liable (whether in contract or tort,
 // including negligence, or under any other theory of
 // liability) for any loss or damage of any kind or nature
 // related to, arising under or in connection with these
@@ -26,11 +25,11 @@
 // (including loss of data, profits, goodwill, or any type of
 // loss or damage suffered as a result of any action brought
 // by a third party) even if such damage or loss was
-// reasonably foreseeable or Xilinx had been advised of the
+// reasonably foreseeable or AMD had been advised of the
 // possibility of the same.
-// 
+//
 // CRITICAL APPLICATIONS
-// Xilinx products are not designed or intended to be fail-
+// AMD products are not designed or intended to be fail-
 // safe, or for use in any application requiring fail-safe
 // performance, such as life-support or safety devices or
 // systems, Class III medical devices, nuclear facilities,
@@ -39,13 +38,12 @@
 // injury, or severe property or environmental damage
 // (individually and collectively, "Critical
 // Applications"). Customer assumes the sole risk and
-// liability of any use of Xilinx products in Critical
+// liability of any use of AMD products in Critical
 // Applications, subject only to applicable laws and
 // regulations governing limitations on product liability.
-// 
+//
 // THIS COPYRIGHT NOTICE AND DISCLAIMER MUST BE RETAINED AS
 // PART OF THIS FILE AT ALL TIMES.
-// 
 //----------------------------------------------------------------------------
 // User entered comments
 //----------------------------------------------------------------------------
@@ -55,10 +53,10 @@
 //  Output     Output      Phase    Duty Cycle   Pk-to-Pk     Phase
 //   Clock     Freq (MHz)  (degrees)    (%)     Jitter (ps)  Error (ps)
 //----------------------------------------------------------------------------
-// CLK_OUT1___100.000______0.000______50.0______151.366____132.063
-// CLK_OUT2___200.000______0.000______50.0______132.221____132.063
-// CLK_OUT3____12.000______0.000______50.0______231.952____132.063
-// CLK_OUT4____50.000______0.000______50.0______174.353____132.063
+// clk_out1__100.00000______0.000______50.0______151.366____132.063
+// clk_out2__200.00000______0.000______50.0______132.221____132.063
+// clk_out3__12.00000______0.000______50.0______231.952____132.063
+// clk_out4__50.00000______0.000______50.0______174.353____132.063
 //
 //----------------------------------------------------------------------------
 // Input Clock   Freq (MHz)    Input Jitter (UI)
@@ -68,8 +66,8 @@
 `timescale 1ps/1ps
 
 module clk_wiz_0_clk_wiz 
+
  (// Clock in ports
-  input         clk_in1,
   // Clock out ports
   output        clk_out1,
   output        clk_out2,
@@ -77,14 +75,17 @@ module clk_wiz_0_clk_wiz
   output        clk_out4,
   // Status and control signals
   input         reset,
-  output        locked
+  output        locked,
+  input         clk_in1
  );
-
   // Input buffering
   //------------------------------------
+wire clk_in1_clk_wiz_0;
+wire clk_in2_clk_wiz_0;
   IBUF clkin1_ibufg
    (.O (clk_in1_clk_wiz_0),
     .I (clk_in1));
+
 
 
 
@@ -94,6 +95,15 @@ module clk_wiz_0_clk_wiz
   // Instantiation of the MMCM PRIMITIVE
   //    * Unused inputs are tied off
   //    * Unused outputs are labeled unused
+
+  wire        clk_out1_clk_wiz_0;
+  wire        clk_out2_clk_wiz_0;
+  wire        clk_out3_clk_wiz_0;
+  wire        clk_out4_clk_wiz_0;
+  wire        clk_out5_clk_wiz_0;
+  wire        clk_out6_clk_wiz_0;
+  wire        clk_out7_clk_wiz_0;
+
   wire [15:0] do_unused;
   wire        drdy_unused;
   wire        psdone_unused;
@@ -179,17 +189,20 @@ module clk_wiz_0_clk_wiz
     .CLKFBSTOPPED        (clkfbstopped_unused),
     .PWRDWN              (1'b0),
     .RST                 (reset_high));
-
   assign reset_high = reset; 
 
   assign locked = locked_int;
-
-  // Output buffering
+// Clock Monitor clock assigning
+//--------------------------------------
+ // Output buffering
   //-----------------------------------
 
   BUFG clkf_buf
    (.O (clkfbout_buf_clk_wiz_0),
     .I (clkfbout_clk_wiz_0));
+
+
+
 
 
 

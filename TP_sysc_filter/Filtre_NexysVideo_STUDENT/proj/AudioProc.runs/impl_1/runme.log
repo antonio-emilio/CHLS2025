@@ -1,0 +1,430 @@
+
+*** Running vivado
+    with args -log top_level_FIR_FILTER.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source top_level_FIR_FILTER.tcl -notrace
+
+
+
+****** Vivado v2024.2 (64-bit)
+  **** SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+  **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+  **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+  **** Start of session at: Sun Feb 16 17:29:38 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source top_level_FIR_FILTER.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/Conta/Documents/GitHub/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/repo'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2024.2/data/ip'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is C:/Users/Conta/Documents/GitHub/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/proj/AudioProc.cache/ip 
+Command: link_design -top top_level_FIR_FILTER -part xc7a200tsbg484-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7a200tsbg484-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 626.016 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 25 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'top_level_FIR_FILTER' is not ideal for floorplanning, since the cellview 'top_level_FIR_FILTER' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-479] Netlist was created with Vivado 2024.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Users/Conta/Documents/Github/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/constraints/NexysVideo_Master.xdc]
+WARNING: [Vivado 12-584] No ports matched 'CLK100MHZ'. [C:/Users/Conta/Documents/Github/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/constraints/NexysVideo_Master.xdc:8]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Conta/Documents/Github/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/constraints/NexysVideo_Master.xdc:8]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led3'. [C:/Users/Conta/Documents/Github/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/constraints/NexysVideo_Master.xdc:15]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Conta/Documents/Github/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/constraints/NexysVideo_Master.xdc:15]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led4'. [C:/Users/Conta/Documents/Github/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/constraints/NexysVideo_Master.xdc:16]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Conta/Documents/Github/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/constraints/NexysVideo_Master.xdc:16]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led5'. [C:/Users/Conta/Documents/Github/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/constraints/NexysVideo_Master.xdc:17]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Conta/Documents/Github/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/constraints/NexysVideo_Master.xdc:17]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led6'. [C:/Users/Conta/Documents/Github/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/constraints/NexysVideo_Master.xdc:18]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Conta/Documents/Github/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/constraints/NexysVideo_Master.xdc:18]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led7'. [C:/Users/Conta/Documents/Github/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/constraints/NexysVideo_Master.xdc:19]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Conta/Documents/Github/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/constraints/NexysVideo_Master.xdc:19]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BTNC'. [C:/Users/Conta/Documents/Github/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/constraints/NexysVideo_Master.xdc:23]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Conta/Documents/Github/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/constraints/NexysVideo_Master.xdc:23]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BTND'. [C:/Users/Conta/Documents/Github/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/constraints/NexysVideo_Master.xdc:24]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Conta/Documents/Github/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/constraints/NexysVideo_Master.xdc:24]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BTNL'. [C:/Users/Conta/Documents/Github/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/constraints/NexysVideo_Master.xdc:25]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Conta/Documents/Github/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/constraints/NexysVideo_Master.xdc:25]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BTNR'. [C:/Users/Conta/Documents/Github/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/constraints/NexysVideo_Master.xdc:26]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Conta/Documents/Github/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/constraints/NexysVideo_Master.xdc:26]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BTNU'. [C:/Users/Conta/Documents/Github/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/constraints/NexysVideo_Master.xdc:27]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Conta/Documents/Github/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/constraints/NexysVideo_Master.xdc:27]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rstn'. [C:/Users/Conta/Documents/Github/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/constraints/NexysVideo_Master.xdc:28]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Conta/Documents/Github/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/constraints/NexysVideo_Master.xdc:28]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw'. [C:/Users/Conta/Documents/Github/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/constraints/NexysVideo_Master.xdc:32]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Conta/Documents/Github/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/constraints/NexysVideo_Master.xdc:32]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw3'. [C:/Users/Conta/Documents/Github/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/constraints/NexysVideo_Master.xdc:35]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Conta/Documents/Github/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/constraints/NexysVideo_Master.xdc:35]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw4'. [C:/Users/Conta/Documents/Github/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/constraints/NexysVideo_Master.xdc:36]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Conta/Documents/Github/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/constraints/NexysVideo_Master.xdc:36]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw5'. [C:/Users/Conta/Documents/Github/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/constraints/NexysVideo_Master.xdc:37]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Conta/Documents/Github/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/constraints/NexysVideo_Master.xdc:37]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw6'. [C:/Users/Conta/Documents/Github/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/constraints/NexysVideo_Master.xdc:38]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Conta/Documents/Github/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/constraints/NexysVideo_Master.xdc:38]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw7'. [C:/Users/Conta/Documents/Github/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/constraints/NexysVideo_Master.xdc:39]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Conta/Documents/Github/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/constraints/NexysVideo_Master.xdc:39]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ac_adc_sdata'. [C:/Users/Conta/Documents/Github/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/constraints/NexysVideo_Master.xdc:91]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Conta/Documents/Github/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/constraints/NexysVideo_Master.xdc:91]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ac_bclk'. [C:/Users/Conta/Documents/Github/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/constraints/NexysVideo_Master.xdc:92]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Conta/Documents/Github/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/constraints/NexysVideo_Master.xdc:92]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ac_dac_sdata'. [C:/Users/Conta/Documents/Github/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/constraints/NexysVideo_Master.xdc:93]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Conta/Documents/Github/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/constraints/NexysVideo_Master.xdc:93]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ac_lrclk'. [C:/Users/Conta/Documents/Github/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/constraints/NexysVideo_Master.xdc:94]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Conta/Documents/Github/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/constraints/NexysVideo_Master.xdc:94]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ac_mclk'. [C:/Users/Conta/Documents/Github/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/constraints/NexysVideo_Master.xdc:95]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Conta/Documents/Github/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/constraints/NexysVideo_Master.xdc:95]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'scl'. [C:/Users/Conta/Documents/Github/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/constraints/NexysVideo_Master.xdc:202]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Conta/Documents/Github/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/constraints/NexysVideo_Master.xdc:202]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sda'. [C:/Users/Conta/Documents/Github/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/constraints/NexysVideo_Master.xdc:203]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Conta/Documents/Github/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/constraints/NexysVideo_Master.xdc:203]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Users/Conta/Documents/Github/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/constraints/NexysVideo_Master.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 751.500 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+9 Infos, 28 Warnings, 25 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a200t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a200t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.710 . Memory (MB): peak = 788.109 ; gain = 36.609
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: 173791600
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1311.867 ; gain = 523.758
+
+Starting Logic Optimization Task
+
+Phase 1 Initialization
+
+Phase 1.1 Core Generation And Design Setup
+Phase 1.1 Core Generation And Design Setup | Checksum: 173791600
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1716.348 ; gain = 0.000
+
+Phase 1.2 Setup Constraints And Sort Netlist
+Phase 1.2 Setup Constraints And Sort Netlist | Checksum: 173791600
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1716.348 ; gain = 0.000
+Phase 1 Initialization | Checksum: 173791600
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1716.348 ; gain = 0.000
+
+Phase 2 Timer Update And Timing Data Collection
+
+Phase 2.1 Timer Update
+Phase 2.1 Timer Update | Checksum: 173791600
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1716.348 ; gain = 0.000
+
+Phase 2.2 Timing Data Collection
+Phase 2.2 Timing Data Collection | Checksum: 173791600
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 1716.348 ; gain = 0.000
+Phase 2 Timer Update And Timing Data Collection | Checksum: 173791600
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 1716.348 ; gain = 0.000
+
+Phase 3 Retarget
+INFO: [Opt 31-1851] Number of loadless carry chains removed were: 0
+INFO: [Opt 31-1834] Total Chains To Be Transformed Were: 0 AND Number of Transformed insts Created are: 0
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 3 Retarget | Checksum: 173791600
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.041 . Memory (MB): peak = 1716.348 ; gain = 0.000
+Retarget | Checksum: 173791600
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
+
+Phase 4 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 4 Constant propagation | Checksum: eef9c39b
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.048 . Memory (MB): peak = 1716.348 ; gain = 0.000
+Constant propagation | Checksum: eef9c39b
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 5 Sweep
+INFO: [Constraints 18-11670] Building netlist checker database with flags, 0x8
+Done building netlist checker database: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1716.348 ; gain = 0.000
+Phase 5 Sweep | Checksum: 16d6bde65
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.056 . Memory (MB): peak = 1716.348 ; gain = 0.000
+Sweep | Checksum: 16d6bde65
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
+
+Phase 6 BUFG optimization
+Phase 6 BUFG optimization | Checksum: 16d6bde65
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.080 . Memory (MB): peak = 1716.348 ; gain = 0.000
+BUFG optimization | Checksum: 16d6bde65
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 7 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 7 Shift Register Optimization | Checksum: 16d6bde65
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.082 . Memory (MB): peak = 1716.348 ; gain = 0.000
+Shift Register Optimization | Checksum: 16d6bde65
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 8 Post Processing Netlist
+Phase 8 Post Processing Netlist | Checksum: 16d6bde65
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.084 . Memory (MB): peak = 1716.348 ; gain = 0.000
+Post Processing Netlist | Checksum: 16d6bde65
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+
+Phase 9 Finalization
+
+Phase 9.1 Finalizing Design Cores and Updating Shapes
+Phase 9.1 Finalizing Design Cores and Updating Shapes | Checksum: 140fffe8f
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.093 . Memory (MB): peak = 1716.348 ; gain = 0.000
+
+Phase 9.2 Verifying Netlist Connectivity
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1716.348 ; gain = 0.000
+Phase 9.2 Verifying Netlist Connectivity | Checksum: 140fffe8f
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.098 . Memory (MB): peak = 1716.348 ; gain = 0.000
+Phase 9 Finalization | Checksum: 140fffe8f
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.098 . Memory (MB): peak = 1716.348 ; gain = 0.000
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |               0  |               0  |                                              0  |
+|  Constant propagation         |               0  |               0  |                                              0  |
+|  Sweep                        |               0  |               0  |                                              0  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+Ending Logic Optimization Task | Checksum: 140fffe8f
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.099 . Memory (MB): peak = 1716.348 ; gain = 0.000
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+Ending Power Optimization Task | Checksum: 140fffe8f
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1716.348 ; gain = 0.000
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 140fffe8f
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1716.348 ; gain = 0.000
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1716.348 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: 140fffe8f
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1716.348 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+29 Infos, 28 Warnings, 25 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1716.348 ; gain = 964.848
+INFO: [Vivado 12-24828] Executing command : report_drc -file top_level_FIR_FILTER_drc_opted.rpt -pb top_level_FIR_FILTER_drc_opted.pb -rpx top_level_FIR_FILTER_drc_opted.rpx
+Command: report_drc -file top_level_FIR_FILTER_drc_opted.rpt -pb top_level_FIR_FILTER_drc_opted.pb -rpx top_level_FIR_FILTER_drc_opted.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file C:/Users/Conta/Documents/GitHub/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/proj/AudioProc.runs/impl_1/top_level_FIR_FILTER_drc_opted.rpt.
+report_drc completed successfully
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1716.348 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Conta/Documents/GitHub/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/proj/AudioProc.runs/impl_1/top_level_FIR_FILTER_opt.dcp' has been generated.
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a200t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a200t'
+INFO: [Common 17-83] Releasing license: Implementation
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+
+Starting Placer Task
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1716.348 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 1319237b6
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1716.348 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1716.348 ; gain = 0.000
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+ERROR: [Place 30-415] IO Placement failed due to overutilization. This design contains 436 I/O ports
+ while the target  device: 7a200t package: sbg484, contains only 285 available user I/O. The target device has 285 usable I/O pins of which 0 are already occupied by user-locked I/Os.
+ To rectify this issue:
+ 1. Ensure you are targeting the correct device and package.  Select a larger device or different package if necessary.
+ 2. Check the top-level ports of the design to ensure the correct number of ports are specified.
+ 3. Consider design changes to reduce the number of I/Os necessary.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+ERROR: [Place 30-68] Instance clk_IBUF_BUFG_inst (BUFG) is not placed
+ERROR: [Place 30-68] Instance clk_IBUF_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_0_IBUF[0]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_0_IBUF[10]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_0_IBUF[11]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_0_IBUF[12]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_0_IBUF[13]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_0_IBUF[14]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_0_IBUF[15]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_0_IBUF[16]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_0_IBUF[17]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_0_IBUF[18]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_0_IBUF[19]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_0_IBUF[1]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_0_IBUF[20]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_0_IBUF[21]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_0_IBUF[22]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_0_IBUF[23]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_0_IBUF[2]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_0_IBUF[3]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_0_IBUF[4]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_0_IBUF[5]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_0_IBUF[6]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_0_IBUF[7]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_0_IBUF[8]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_0_IBUF[9]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_10_IBUF[0]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_10_IBUF[10]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_10_IBUF[11]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_10_IBUF[12]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_10_IBUF[13]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_10_IBUF[14]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_10_IBUF[15]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_10_IBUF[16]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_10_IBUF[17]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_10_IBUF[18]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_10_IBUF[19]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_10_IBUF[1]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_10_IBUF[20]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_10_IBUF[21]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_10_IBUF[22]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_10_IBUF[23]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_10_IBUF[2]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_10_IBUF[3]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_10_IBUF[4]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_10_IBUF[5]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_10_IBUF[6]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_10_IBUF[7]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_10_IBUF[8]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_10_IBUF[9]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_11_IBUF[0]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_11_IBUF[10]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_11_IBUF[11]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_11_IBUF[12]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_11_IBUF[13]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_11_IBUF[14]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_11_IBUF[15]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_11_IBUF[16]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_11_IBUF[17]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_11_IBUF[18]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_11_IBUF[19]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_11_IBUF[1]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_11_IBUF[20]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_11_IBUF[21]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_11_IBUF[22]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_11_IBUF[23]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_11_IBUF[2]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_11_IBUF[3]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_11_IBUF[4]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_11_IBUF[5]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_11_IBUF[6]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_11_IBUF[7]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_11_IBUF[8]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_11_IBUF[9]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_12_IBUF[0]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_12_IBUF[10]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_12_IBUF[11]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_12_IBUF[12]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_12_IBUF[13]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_12_IBUF[14]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_12_IBUF[15]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_12_IBUF[16]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_12_IBUF[17]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_12_IBUF[18]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_12_IBUF[19]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_12_IBUF[1]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_12_IBUF[20]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_12_IBUF[21]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_12_IBUF[22]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_12_IBUF[23]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_12_IBUF[2]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_12_IBUF[3]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_12_IBUF[4]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_12_IBUF[5]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_12_IBUF[6]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_12_IBUF[7]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_12_IBUF[8]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_12_IBUF[9]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_13_IBUF[0]_inst (IBUF) is not placed
+ERROR: [Place 30-68] Instance coeffs_13_IBUF[10]_inst (IBUF) is not placed
+INFO: [Common 17-14] Message 'Place 30-68' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: ef5d9611
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.345 . Memory (MB): peak = 1716.348 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: ef5d9611
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.345 . Memory (MB): peak = 1716.348 ; gain = 0.000
+ERROR: [Place 30-99] Placer failed with error: 'IO Clock Placer failed'
+Please review all ERROR, CRITICAL WARNING, and WARNING messages during placement to understand the cause for failure.
+Ending Placer Task | Checksum: ef5d9611
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.347 . Memory (MB): peak = 1716.348 ; gain = 0.000
+46 Infos, 28 Warnings, 25 Critical Warnings and 103 Errors encountered.
+place_design failed
+ERROR: [Common 17-69] Command failed: Placer could not place all instances
+INFO: [Common 17-206] Exiting Vivado at Sun Feb 16 17:29:55 2025...

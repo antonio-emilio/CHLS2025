@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7a200tsbg484-1" LaunchTime="1739723334">
+  <File Type="PA-TCL" Name="top_level_FIR_FILTER.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="top_level_FIR_FILTER_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="top_level_FIR_FILTER_reports.tcl"/>
+  <File Type="RDS-RDS" Name="top_level_FIR_FILTER.vds"/>
+  <File Type="RDS-UTIL" Name="top_level_FIR_FILTER_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="top_level_FIR_FILTER_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="top_level_FIR_FILTER.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="top_level_FIR_FILTER_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="top_level_FIR_FILTER_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/../../../../../../Github/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/rtl.vhdl">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../../../Github/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/tb_firUnit.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../../../Github/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/audio_init.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../../../Github/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/debounce.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../../../Github/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/TWICtl.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../../../Github/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/fir.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../../../Github/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/i2s_ctl.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../../../Github/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/audioProc.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="top_level_FIR_FILTER"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PPRDIR/../../../../../../Github/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/constraints/NexysVideo_Master.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Flow_PerfOptimized_High" Flow="Vivado Synthesis 2014">
+      <Desc>Higher performance designs, resource sharing is turned off, the global fanout guide is set to a lower number, FSM extraction forced to one-hot, LUT combining is disabled, equivalent registers are preserved, SRL are inferred  with a larger threshold</Desc>
+    </StratHandle>
+    <Step Id="synth_design">
+      <Option Id="FsmExtraction">1</Option>
+      <Option Id="KeepEquivalentRegisters">1</Option>
+      <Option Id="NoCombineLuts">1</Option>
+      <Option Id="RepFanoutThreshold">400</Option>
+      <Option Id="ResourceSharing">2</Option>
+      <Option Id="ShregMinSize">5</Option>
+    </Step>
+  </Strategy>
+</GenRun>

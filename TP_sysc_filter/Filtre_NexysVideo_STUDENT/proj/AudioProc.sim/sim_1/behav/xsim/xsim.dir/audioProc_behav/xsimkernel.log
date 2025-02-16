@@ -1,0 +1,7 @@
+Running: xsim.dir/audioProc_behav/xsimk.exe -simmode gui -wdb audioProc_behav.wdb -simrunnum 0 -socket 61321
+Design successfully loaded
+Design Loading Memory Usage: 29788 KB (Peak: 29788 KB)
+Design Loading CPU Usage: 452 ms
+Simulation completed
+Simulation Memory Usage: 31368 KB (Peak: 31368 KB)
+Simulation CPU Usage: 499 ms

@@ -1,0 +1,15 @@
+0.7
+2020.2
+Nov  8 2024
+22:36:57
+C:/Users/Conta/Documents/GitHub/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/proj/AudioProc.sim/sim_1/behav/xsim/glbl.v,1724786425,verilog,,,,glbl,,,,,,,,
+C:/Users/Conta/Documents/GitHub/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/TWICtl.vhd,1739286656,vhdl,,,,twictl;twiutils,,,,,,,,
+C:/Users/Conta/Documents/GitHub/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/audioProc.v,1739286644,verilog,,,,audioProc,,,../../../../AudioProc.ip_user_files/ipstatic,,,,,
+C:/Users/Conta/Documents/GitHub/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/audio_init.v,1739286642,verilog,,C:/Users/Conta/Documents/GitHub/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/debounce.v,,audio_init,,,../../../../AudioProc.ip_user_files/ipstatic,,,,,
+C:/Users/Conta/Documents/GitHub/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/debounce.v,1739286646,verilog,,C:/Users/Conta/Documents/GitHub/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/audioProc.v,,debounce,,,../../../../AudioProc.ip_user_files/ipstatic,,,,,
+C:/Users/Conta/Documents/GitHub/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/fir.vhd,1739286647,vhdl,,,,fir,,,,,,,,
+C:/Users/Conta/Documents/GitHub/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/i2s_ctl.vhd,1739286649,vhdl,,,,i2s_ctl,,,,,,,,
+C:/Users/Conta/Documents/GitHub/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/rtl.vhdl,1739284839,vhdl,C:/Users/Conta/Documents/GitHub/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/tb_firUnit.vhd,,,top_level,,,,,,,,
+C:/Users/Conta/Documents/GitHub/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/tb_firUnit.vhd,1739286653,vhdl,,,,tb_firunit,,,,,,,,
+C:/Users/Conta/Documents/GitHub/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/ip/clk_wiz_0/clk_wiz_0.v,1739722855,verilog,,C:/Users/Conta/Documents/GitHub/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/hdl/audio_init.v,,clk_wiz_0,,,../../../../AudioProc.ip_user_files/ipstatic,,,,,
+C:/Users/Conta/Documents/GitHub/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v,1739722855,verilog,,C:/Users/Conta/Documents/GitHub/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/src/ip/clk_wiz_0/clk_wiz_0.v,,clk_wiz_0_clk_wiz,,,../../../../AudioProc.ip_user_files/ipstatic,,,,,

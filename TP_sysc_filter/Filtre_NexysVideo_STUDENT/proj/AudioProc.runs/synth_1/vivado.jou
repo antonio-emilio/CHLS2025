@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Sun Feb 16 17:28:56 2025
+# Process ID         : 24292
+# Current directory  : C:/Users/Conta/Documents/GitHub/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/proj/AudioProc.runs/synth_1
+# Command line       : vivado.exe -log top_level_FIR_FILTER.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_level_FIR_FILTER.tcl
+# Log file           : C:/Users/Conta/Documents/GitHub/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/proj/AudioProc.runs/synth_1/top_level_FIR_FILTER.vds
+# Journal file       : C:/Users/Conta/Documents/GitHub/IMT/CHLS2025/TP_sysc_filter/Filtre_NexysVideo_STUDENT/proj/AudioProc.runs/synth_1\vivado.jou
+# Running On         : BOOK-IFJRPL7DU0
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26100
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i7-13700H
+# CPU Frequency      : 2918 MHz
+# CPU Physical cores : 14
+# CPU Logical cores  : 20
+# Host memory        : 33897 MB
+# Swap memory        : 2147 MB
+# Total Virtual      : 36045 MB
+# Available Virtual  : 12037 MB
+#-----------------------------------------------------------
+source top_level_FIR_FILTER.tcl -notrace
