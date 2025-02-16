@@ -360,3 +360,7 @@ dofile /mnt/campux/github/CHLS2025/TP_sysc_filter/directives.tcl
 #     /usr/local/bin/Siemens_EDA/Catapult_Synthesis_2022.2_1-1019737/Mgc_home/bin/make -f ./scverify/Verify_rtl_v_msim.mk SIMTOOL=msim build < "/dev/null" (BASIC-15)
 # /usr/local/bin/Siemens_EDA/Catapult_Synthesis_2022.2_1-1019737/Mgc_home/shared/include/mkfiles/ccs_questasim.mk:148: *** No QuestaSIM installation found. Check your QuestaSIM flow Path option in Catapult.  Stop.
 # > end dofile /mnt/campux/github/CHLS2025/TP_sysc_filter/directives.tcl
+flow run /DesignAnalyzer/launch
+quit
+# Saving project file '/mnt/campux/github/CHLS2025/TP_sysc_filter/Catapult.ccs'. (PRJ-5)
+// Finish time Sun Feb 16 17:08:24 2025, time elapsed 25:21, peak memory 1.56GB, exit status 0

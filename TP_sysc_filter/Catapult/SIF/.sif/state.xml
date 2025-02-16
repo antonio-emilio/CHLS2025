@@ -26,4 +26,6 @@
   <EVENT TYPE="end" STATE="instance" SAVE="false"/>
   <EVENT TYPE="begin" STATE="extract" SAVE="false"/>
   <EVENT TYPE="end" STATE="extract" SAVE="false"/>
+  <EVENT TYPE="begin" STATE="extract" SAVE="true"/>
+  <EVENT TYPE="end" STATE="extract" SAVE="true"/>
 </SIF_PROJECT_STATE>
