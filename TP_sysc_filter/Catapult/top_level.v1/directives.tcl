@@ -75,6 +75,6 @@ directive set -CLOCKS {clk {-CLOCK_PERIOD 10.0 -CLOCK_UNCERTAINTY 0.0 -CLOCK_HIG
 go assembly
 directive set /top_level/FIR_FILTER/while -PIPELINE_INIT_INTERVAL 1
 directive set /top_level/FIR_FILTER/SHIFT -UNROLL yes
-directive set /top_level/FIR_FILTER/MAC -UNROLL yes
+directive set /top_level/FIR_FILTER/MAC -UNROLL 2
 go architect
 go extract
