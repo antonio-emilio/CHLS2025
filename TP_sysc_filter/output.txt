@@ -1,0 +1,132 @@
+
+        SystemC 2.3.3-Accellera --- Jun  7 2022 13:10:00
+        Copyright (c) 1996-2018 by all Contributors,
+        ALL RIGHTS RESERVED
+
+Info: (I703) tracing timescale unit set: 1 ns (waves.vcd)
+stimulus_wave thread started
+coeffs(0) <= std_logic_vector(to_signed(137359, 24));
+coeffs(1) <= std_logic_vector(to_signed(205642, 24));
+coeffs(2) <= std_logic_vector(to_signed(398685, 24));
+coeffs(3) <= std_logic_vector(to_signed(683108, 24));
+coeffs(4) <= std_logic_vector(to_signed(1009732, 24));
+coeffs(5) <= std_logic_vector(to_signed(1322081, 24));
+coeffs(6) <= std_logic_vector(to_signed(1566147, 24));
+coeffs(7) <= std_logic_vector(to_signed(1699729, 24));
+coeffs(8) <= std_logic_vector(to_signed(1699729, 24));
+coeffs(9) <= std_logic_vector(to_signed(1566147, 24));
+coeffs(10) <= std_logic_vector(to_signed(1322081, 24));
+coeffs(11) <= std_logic_vector(to_signed(1009732, 24));
+coeffs(12) <= std_logic_vector(to_signed(683108, 24));
+coeffs(13) <= std_logic_vector(to_signed(398685, 24));
+coeffs(14) <= std_logic_vector(to_signed(205642, 24));
+coeffs(15) <= std_logic_vector(to_signed(137359, 24));
+
+here
+Starting to send data stream
+wave_consume thread started
+Starting to consume from DUT
+Clock Generator thread running
+Audio Clock Generator thread running
+audio_sample #0 sent to filter
+0(HW) 0 (SW)
+audio_sample #1 sent to filter
+0(HW) 0.032749 (SW)
+audio_sample #2 sent to filter
+0(HW) 0.114527 (SW)
+audio_sample #3 sent to filter
+0(HW) 0.25861 (SW)
+audio_sample #4 sent to filter
+1(HW) 0.549278 (SW)
+audio_sample #5 sent to filter
+1(HW) 1.03466 (SW)
+audio_sample #6 sent to filter
+2(HW) 1.76744 (SW)
+audio_sample #7 sent to filter
+3(HW) 2.79574 (SW)
+audio_sample #8 sent to filter
+4(HW) 4.12208 (SW)
+audio_sample #9 sent to filter
+6(HW) 5.77919 (SW)
+audio_sample #10 sent to filter
+8(HW) 7.73182 (SW)
+audio_sample #11 sent to filter
+10(HW) 9.93185 (SW)
+audio_sample #12 sent to filter
+12(HW) 12.2938 (SW)
+audio_sample #13 sent to filter
+15(HW) 14.7862 (SW)
+audio_sample #14 sent to filter
+17(HW) 17.3438 (SW)
+audio_sample #15 sent to filter
+20(HW) 19.8959 (SW)
+audio_sample #16 sent to filter
+22(HW) 22.4544 (SW)
+audio_sample #17 sent to filter
+25(HW) 24.9703 (SW)
+audio_sample #18 sent to filter
+27(HW) 27.4019 (SW)
+audio_sample #19 sent to filter
+30(HW) 29.8147 (SW)
+audio_sample #20 sent to filter
+32(HW) 32.1522 (SW)
+audio_sample #21 sent to filter
+34(HW) 34.447 (SW)
+audio_sample #22 sent to filter
+37(HW) 36.6903 (SW)
+audio_sample #23 sent to filter
+39(HW) 38.8493 (SW)
+audio_sample #24 sent to filter
+41(HW) 40.9985 (SW)
+audio_sample #25 sent to filter
+43(HW) 43.0885 (SW)
+audio_sample #26 sent to filter
+45(HW) 45.1241 (SW)
+audio_sample #27 sent to filter
+47(HW) 47.1136 (SW)
+audio_sample #28 sent to filter
+49(HW) 49.0408 (SW)
+audio_sample #29 sent to filter
+51(HW) 50.9001 (SW)
+audio_sample #30 sent to filter
+53(HW) 52.6489 (SW)
+audio_sample #31 sent to filter
+54(HW) 54.3232 (SW)
+audio_sample #32 sent to filter
+56(HW) 55.923 (SW)
+audio_sample #33 sent to filter
+57(HW) 57.4122 (SW)
+audio_sample #34 sent to filter
+59(HW) 58.8336 (SW)
+audio_sample #35 sent to filter
+60(HW) 60.1599 (SW)
+audio_sample #36 sent to filter
+61(HW) 61.4239 (SW)
+audio_sample #37 sent to filter
+63(HW) 62.5874 (SW)
+audio_sample #38 sent to filter
+64(HW) 63.6567 (SW)
+audio_sample #39 sent to filter
+65(HW) 64.6218 (SW)
+audio_sample #40 sent to filter
+65(HW) 65.4579 (SW)
+audio_sample #41 sent to filter
+66(HW) 66.2061 (SW)
+audio_sample #42 sent to filter
+67(HW) 66.8898 (SW)
+audio_sample #43 sent to filter
+67(HW) 67.4948 (SW)
+audio_sample #44 sent to filter
+68(HW) 68.0311 (SW)
+audio_sample #45 sent to filter
+68(HW) 68.4823 (SW)
+audio_sample #46 sent to filter
+69(HW) 68.8416 (SW)
+audio_sample #47 sent to filter
+69(HW) 69.0848 (SW)
+audio_sample #48 sent to filter
+69(HW) 69.1593 (SW)
+audio_sample #49 sent to filter
+69(HW) 69.0848 (SW)
+Stopping SystemC simulation
+Worst error compared with double precision = 0.494806
