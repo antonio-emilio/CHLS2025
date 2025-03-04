@@ -12,7 +12,7 @@ void SINK::COMPORTEMENT()
     std::ofstream imagStream("out_imag.txt");
 
     if (!realStream || !imagStream) {
-        cout << "[SINK] Erro ao abrir arquivos de saída!" << endl;
+        cout << "[SINK] Erreur d'ouverture des fichiers de sortie!" << endl;
         return;
     }
 
@@ -22,7 +22,7 @@ void SINK::COMPORTEMENT()
             float real = in_real.read();
             float imag = in_imag.read();
 
-            cout << "[SINK] Escrevendo dados nos arquivos." << real << endl;
+            cout << "[SINK] Écriture de données dans des fichiers." << endl;
 
             realStream << real << std::endl;
             imagStream << imag << std::endl;

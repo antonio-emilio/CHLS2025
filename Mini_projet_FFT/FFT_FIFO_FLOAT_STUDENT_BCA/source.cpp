@@ -12,7 +12,7 @@ void SOURCE::COMPORTEMENT()
     std::ifstream imagStream("in_imag.txt");
 
     if (!realStream || !imagStream) {
-        cout << "[SOURCE] Erro ao abrir os arquivos de entrada!" << endl;
+        cout << "[SOURCE] Erreur d'ouverture des fichiers d'entrée!" << endl;
         return;
     }
 
@@ -20,10 +20,10 @@ void SOURCE::COMPORTEMENT()
     {
         if (realStream.eof() || imagStream.eof()) {
             data_valid.write(false);
-            cout << "[SOURCE] Fim do arquivo alcançado." << endl;
+            cout << "[SOURCE] Fin du fichier atteinte." << endl;
         }
         else if (data_req.read() && !sent) {
-            cout << "[SOURCE] Enviando dados." << endl;
+            cout << "[SOURCE] Envoi de données." << endl;
             float real, imag;
             realStream >> real;
             imagStream >> imag;
