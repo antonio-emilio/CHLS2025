@@ -16,13 +16,14 @@ void SOURCE::COMPORTEMENT()
         return;
     }
 
-    while (true)
+    while (true)    
     {
         if (realStream.eof() || imagStream.eof()) {
             data_valid.write(false);
             cout << "[SOURCE] Fim do arquivo alcançado." << endl;
         }
         else if (data_req.read()) {
+            cout << "[SOURCE] Lendo dados do arquivo." << endl;
             float real, imag;
             realStream >> real;
             imagStream >> imag;
