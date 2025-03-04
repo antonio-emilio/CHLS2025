@@ -30,6 +30,7 @@ SC_MODULE(FFT)
 
         int i = 0;
         int j = 0;
+	bool processing;
 
         SC_CTOR(FFT)
         {
