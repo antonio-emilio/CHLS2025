@@ -22,16 +22,18 @@ void SOURCE::COMPORTEMENT()
             data_valid.write(false);
             cout << "[SOURCE] Fim do arquivo alcançado." << endl;
         }
-        else if (data_req.read()) {
-            cout << "[SOURCE] Lendo dados do arquivo." << endl;
+        else if (data_req.read() && !sent) {
+            cout << "[SOURCE] Enviando dados." << endl;
             float real, imag;
             realStream >> real;
             imagStream >> imag;
 
-            out.write(real);
-            out.write(imag);
+            out_real.write(real);
+            out_imag.write(imag);
             data_valid.write(true);
+            sent = true;
         } else {
+            sent = false;
             data_valid.write(false);
         }
 

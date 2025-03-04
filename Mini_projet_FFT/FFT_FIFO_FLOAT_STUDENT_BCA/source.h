@@ -7,11 +7,13 @@
 SC_MODULE(SOURCE)
 {
   sc_in_clk clk;
-  sc_out<float> out;
+  sc_out<float> out_real;
+  sc_out<float> out_imag;
   sc_out<bool> data_valid;
   sc_in<bool> data_req;
 
   float real, imag;
+  bool sent = false;
 
   void COMPORTEMENT();
 

@@ -19,6 +19,7 @@ void FFT::COMPORTEMENT()
 {
     complex_t input_fft[8], output_fft[8];
     complex_t stage1[8], stage2[8];
+    processing = false;
 
     while (true)
     {
@@ -28,25 +29,23 @@ void FFT::COMPORTEMENT()
                 cout << "[FFT] Requisitando dados..." << endl;
                 data_req_source.write(true);
             }
-        }
-        
-        if (data_valid_source.read() && i < 8) {
-            cout << "[FFT] Recebendo dados... " << i << endl;
-            input_fft[i].real = in.read();
-            input_fft[i].imag = in.read();
-            i++;
-        
-            if (i < 8) {
-                data_req_source.write(true);
-            } else {
-                data_req_source.write(false);
+
+            if (data_valid_source.read()) {
+                cout << "[FFT] Recebendo dados... " << i << endl;
+                input_fft[i].real = in_real.read();
+                input_fft[i].imag = in_imag.read();
+                i++;
+            
+                if (i < 8) {
+                    data_req_source.write(true);
+                } else {
+                    data_req_source.write(false);
+                }
             }
-        }
-        
+        }        
 
         // Executar a FFT após receber 8 amostras
         if (i == 8 && !processing) {
-            processing = true;
             cout << "[FFT] Executando FFT..." << endl;
 
             // Etapas da FFT...
@@ -65,23 +64,26 @@ void FFT::COMPORTEMENT()
             but(&weights[2], &stage2[2], &stage2[6], &output_fft[2], &output_fft[6]);
             but(&weights[3], &stage2[3], &stage2[7], &output_fft[3], &output_fft[7]);
 
-            data_valid_sink.write(true);
+            processing = true;
             i = 0;
         }
 
-        // Envio dos dados processados para o SINK
-        if (processing && j < 8 && data_valid_sink.read()) {
-            cout << "[FFT] Enviando dados processados..." << endl;
-            out.write(output_fft[j].real);
-            out.write(output_fft[j].imag);
-            j++;
+        if (j == 8) {
+            data_valid_sink.write(false);
+            processing = false;
+            j = 0;
+            cout << "[FFT] Finalizado." << endl;
+        }
 
-            if (j == 8) {
-                data_valid_sink.write(false);
-                processing = false;
-                j = 0;
-                cout << "[FFT] Finalizado." << endl;
-            }
+        // Envio dos dados processados para o SINK
+        if (processing && j < 8 && !data_valid_sink.read()) {
+            cout << "[FFT] Enviando dados processados..." << output_fft[j].real << endl;
+            out_real.write(output_fft[j].real);
+            out_imag.write(output_fft[j].imag);
+            data_valid_sink.write(true);
+            j++;
+        } else if (processing) {
+            data_valid_sink.write(false);
         }
 
         wait();

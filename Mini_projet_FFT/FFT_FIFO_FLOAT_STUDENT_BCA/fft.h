@@ -19,8 +19,10 @@ typedef struct complex_s complex_t;
 SC_MODULE(FFT)
     {
         sc_in<bool> clk;
-        sc_in<float> in;
-        sc_out<float> out;
+        sc_in<float> in_real;
+        sc_in<float> in_imag;
+        sc_out<float> out_real;
+        sc_out<float> out_imag;
 
         sc_in<bool>   data_valid_source;
         sc_out<bool>  data_req_source;

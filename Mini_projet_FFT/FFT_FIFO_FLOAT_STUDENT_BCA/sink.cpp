@@ -19,9 +19,10 @@ void SINK::COMPORTEMENT()
     while (true)
     {
         if (data_valid.read()) {
-            cout << "[SINK] Escrevendo dados nos arquivos." << endl;
-            float real = in.read();
-            float imag = in.read();
+            float real = in_real.read();
+            float imag = in_imag.read();
+
+            cout << "[SINK] Escrevendo dados nos arquivos." << real << endl;
 
             realStream << real << std::endl;
             imagStream << imag << std::endl;

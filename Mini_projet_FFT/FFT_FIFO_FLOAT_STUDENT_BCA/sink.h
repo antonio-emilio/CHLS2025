@@ -6,7 +6,8 @@
 SC_MODULE(SINK)
 {
      sc_in_clk clk;
-     sc_in<float> in;
+     sc_in<float> in_real;
+     sc_in<float> in_imag;
      sc_in<bool> data_valid;
      sc_out<bool> data_req;
 
