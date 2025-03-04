@@ -25,18 +25,18 @@ void FFT::COMPORTEMENT()
     {
 
         // Leitura
-        if ((j == 0 && i == 0 && !data_req_source.read())) {
+        if ((j == 0 && !data_req_source.read() && i != 8)) {
            cout << "[FFT] " << "Solicitating data..." << endl;
            data_req_source.write(true);
         } 
 
         if (data_valid_source.read() && i < 8 && j == 0) {
-            data_req_source.write(false);
+            
             cout << "[FFT] " << "Lecture dans le bloc FFT..."<<i << endl;
             input_fft[i].real = in.read();
             input_fft[i].imag = in.read();
             i++;
-
+            data_req_source.write(false);
         }
         
 
@@ -66,7 +66,6 @@ void FFT::COMPORTEMENT()
             i = 0;
         }
 
-        // Escrita
         if (j < 8 && data_valid_sink.read() && i == 0) {
             cout << "[FFT] " << "Ecriture par le bloc FFT..." << endl;
             

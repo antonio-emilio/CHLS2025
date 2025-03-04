@@ -31,6 +31,8 @@ void SOURCE::COMPORTEMENT()
 
       cout << "[SOURCE] " << "Sample wrote." << endl;
       data_valid.write(true);
+    } else if (data_req.read() && data_valid.read()){
+      data_valid.write(false);
     }
 
     wait();
