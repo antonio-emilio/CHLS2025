@@ -10,17 +10,17 @@ SC_MODULE(TOP)
 {
   // signals
   sc_clock clk;
-  sc_in<float> data_in;
-  sc_out<float> data_out;
+  sc_signal<float> data_in;
+  sc_signal<float> data_out;
 
 
-  bool data_valid_source;
-  bool data_req_source;
-  bool data_valid_sink;
-  bool data_req_sink;
+  sc_signal<bool> data_valid_source;
+  sc_signal<bool> data_req_source;
+  sc_signal<bool> data_valid_sink;
+  sc_signal<bool> data_req_sink;
 
-  float source_fft;
-  float fft_sink;
+  sc_signal<float> source_fft;
+  sc_signal<float> fft_sink;
 
   // instanciate
   SOURCE SOURCE1;

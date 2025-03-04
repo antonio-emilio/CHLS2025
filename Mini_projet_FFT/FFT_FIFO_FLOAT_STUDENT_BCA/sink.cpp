@@ -25,6 +25,7 @@ void SINK::COMPORTEMENT()
 	{
 		if (data_valid.read())
 		{
+			cout << "[SINK] " << "Ecriture des fichiers de sortie." << endl;
 			data_req.write(false);
 
 			real = in.read();

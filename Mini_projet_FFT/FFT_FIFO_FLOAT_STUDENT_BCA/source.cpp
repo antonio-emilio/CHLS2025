@@ -13,15 +13,6 @@ void SOURCE::COMPORTEMENT()
 
   if (!realStream | !imagStream | realStream.eof() | imagStream.eof())
     cout << "[SOURCE] " << "Un des fichiers d'entree n'est pas ouvert" << endl;
-  else
-  {
-    realStream >> real;
-    imagStream >> imag;
-
-    out.write(real);
-    out.write(imag);
-    data_valid.write(true);
-  }
 
   while (true)
   {
@@ -30,13 +21,16 @@ void SOURCE::COMPORTEMENT()
       data_valid.write(false);
       cout << "[SOURCE] " << "Fin de lecture des fichiers d'entree" << endl;
     }
-    else if (data_req.read())
+    else if (data_req.read() && !data_valid.read())
     {
       realStream >> real;
       imagStream >> imag;
 
       out.write(real);
       out.write(imag);
+
+      cout << "[SOURCE] " << "Sample wrote." << endl;
+      data_valid.write(true);
     }
 
     wait();

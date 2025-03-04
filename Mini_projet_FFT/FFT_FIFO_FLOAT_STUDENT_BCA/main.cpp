@@ -1,5 +1,5 @@
 //  main.cpp 
-// Testbench pour FFT avec données en flottant
+// Testbench pour FFT avec donnï¿½es en flottant
 
 #include <systemc.h>
 #include "main.h"
@@ -19,8 +19,9 @@ int sc_main(int argc, char *argv[])
   //sc_trace(tf, mainTop.source_fft, "fifo1");
   // MAIS il faut faire appel a la methode
   // trace() du canal que l'on veut suivre
-  mainTop.source_fft.trace(tf);
-  mainTop.fft_sink.trace(tf);
+  
+  //mainTop.source_fft.trace(tf);
+  //mainTop.fft_sink.trace(tf);
 
 
   //Lancement de la simulation
