@@ -20,29 +20,24 @@ void FFT::COMPORTEMENT()
     complex_t input_fft[8], output_fft[8];
     complex_t stage1[8], stage2[8];
 
-
     while (true)
     {
-
-        // Leitura
-        if ((j == 0 && !data_req_source.read() && i != 8)) {
-           cout << "[FFT] " << "Solicitating data..." << endl;
-           data_req_source.write(true);
+        // Requisição de dados
+        if (i < 8 && !data_valid_source.read()) {
+            data_req_source.write(true);
         } 
 
-        if (data_valid_source.read() && i < 8 && j == 0) {
-            
-            cout << "[FFT] " << "Lecture dans le bloc FFT..."<<i << endl;
+        if (data_valid_source.read() && i < 8) {
             input_fft[i].real = in.read();
             input_fft[i].imag = in.read();
             i++;
             data_req_source.write(false);
         }
-        
 
-        if (i == 8) {
-            data_req_source.write(false);
-            cout << "[FFT] " << "Executing the FFT algorithm..." << endl;
+        // Executar a FFT após receber 8 amostras
+        if (i == 8 && !processing) {
+            processing = true; // Iniciar o processamento
+            cout << "[FFT] Executando FFT..." << endl;
 
             // First stage
             but(&weights[0], &input_fft[0], &input_fft[4], &stage1[0], &stage1[1]);
@@ -56,30 +51,28 @@ void FFT::COMPORTEMENT()
             but(&weights[0], &stage1[4], &stage1[6], &stage2[4], &stage2[6]);
             but(&weights[2], &stage1[5], &stage1[7], &stage2[5], &stage2[7]);
 
-            // Etape 3
+            // Third stage
             but(&weights[0], &stage2[0], &stage2[4], &output_fft[0], &output_fft[4]);
             but(&weights[1], &stage2[1], &stage2[5], &output_fft[1], &output_fft[5]);
             but(&weights[2], &stage2[2], &stage2[6], &output_fft[2], &output_fft[6]);
             but(&weights[3], &stage2[3], &stage2[7], &output_fft[3], &output_fft[7]);
-            
+
             data_valid_sink.write(true);
-            i = 0;
+            i = 0; // Reiniciar contador
         }
 
-        if (j < 8 && data_valid_sink.read() && i == 0) {
-            cout << "[FFT] " << "Ecriture par le bloc FFT..." << endl;
-            
+        // Envio dos dados processados para o SINK
+        if (processing && j < 8 && data_valid_sink.read()) {
             out.write(output_fft[j].real);
             out.write(output_fft[j].imag);
             j++;
 
-        }
-
-        if (j == 8) {
-            i = 0;
-            j = 0;
-            data_valid_sink.write(false);
-            cout << "[FFT] " << "Finish " << endl;
+            if (j == 8) {
+                data_valid_sink.write(false);
+                processing = false;
+                j = 0;
+                cout << "[FFT] Finalizado." << endl;
+            }
         }
 
         wait();
