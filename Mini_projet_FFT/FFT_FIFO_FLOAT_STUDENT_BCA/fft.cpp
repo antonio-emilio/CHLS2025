@@ -21,18 +21,17 @@ void FFT::COMPORTEMENT()
     complex_t stage1[8], stage2[8];
     int i;
 
-    while (1)
+    while (true)
     {
-        if (in.num_available() == 16)
-        {
-            cout << "[FFT] " << "Lecture des 16 chantillons par le bloc FFT..." << endl;
-            for (i = 0; i < 8; i++)
-            {
-                input_fft[i].real = in.read();
-                wait();
-                input_fft[i].imag = in.read();
-                wait();
-            }
+        // Leitura
+        if (data_valid_source.read() && data_req_source.read() && i < 8) {
+            cout << "[FFT] " << "Lecture dans le bloc FFT..." << endl;
+            input_fft[i].real = in.read();
+            input_fft[i].imag = in.read();
+            i++;
+        }
+
+        if (i == 8) {
 
             cout << "[FFT] " << "Executing the FFT algorithm..." << endl;
 
@@ -53,21 +52,26 @@ void FFT::COMPORTEMENT()
             but(&weights[1], &stage2[1], &stage2[5], &output_fft[1], &output_fft[5]);
             but(&weights[2], &stage2[2], &stage2[6], &output_fft[2], &output_fft[6]);
             but(&weights[3], &stage2[3], &stage2[7], &output_fft[3], &output_fft[7]);
+            
+            data_valid_sink.write(true);
+        }
 
+        // Escrita
+        if (i == 8 && data_req_sink.read()) {
             cout << "[FFT] " << "Ecriture des 16 chantillons par le bloc FFT..." << endl;
-            for (i = 0; i < 8; i++)
-            {
-                out.write(output_fft[i].real);
-                wait();
-                out.write(output_fft[i].imag);
-                wait();
-            }
-
+            
+            out.write(output_fft[j].real);
+            out.write(output_fft[j].imag);
+            j++;
             cout << "[FFT] " << "Finish " << endl;
         }
-        else
-        {
-            wait();
+
+        if (j == 8) {
+            i = 0;
+            j = 0;
+            data_valid_sink.write(false);
         }
+        
+        wait();
     }
 }
