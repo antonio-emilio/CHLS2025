@@ -20,9 +20,14 @@ int sc_main(int argc, char *argv[])
   // MAIS il faut faire appel a la methode
   // trace() du canal que l'on veut suivre
   
-  //mainTop.source_fft.trace(tf);
-  //mainTop.fft_sink.trace(tf);
-
+  mainTop.data_valid_source.trace(tf);
+  mainTop.data_req_source.trace(tf);
+  mainTop.data_valid_sink.trace(tf);
+  mainTop.data_req_sink.trace(tf);
+  mainTop.fft_source_real.trace(tf);
+  mainTop.fft_source_imag.trace(tf);
+  mainTop.fft_sink_real.trace(tf);
+  mainTop.fft_sink_imag.trace(tf);
 
   //Lancement de la simulation
   sc_start(2000, SC_NS);

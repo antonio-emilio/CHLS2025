@@ -1,5 +1,5 @@
 $date
-     Mar 04, 2025       18:45:18
+     Mar 04, 2025       18:50:34
 $end
 
 $version
@@ -11,6 +11,12 @@ $timescale
 $end
 
 $scope module SystemC $end
+$scope module top $end
+$var real    1  aaaaa  fft_source_real       $end
+$var real    1  aaaab  fft_source_imag       $end
+$var real    1  aaaac  fft_sink_real       $end
+$var real    1  aaaad  fft_sink_imag       $end
+$upscope $end
 $upscope $end
 $enddefinitions  $end
 
@@ -19,6 +25,157 @@ All initial values are dumped below at time 0 sec = 0 timescale units.
 $end
 
 $dumpvars
+r2011 aaaaa
+r2011 aaaab
+r16 aaaac
+r16 aaaad
 $end
+
+#150
+r16088 aaaac
+r16088 aaaad
+
+#170
+r0 aaaac
+r0 aaaad
+
+#320
+r1 aaaaa
+r1 aaaab
+
+#340
+r0 aaaaa
+r0 aaaab
+
+#470
+r1 aaaac
+r1 aaaad
+
+#640
+r456 aaaab
+
+#660
+r120 aaaaa
+r234 aaaab
+
+#680
+r234 aaaaa
+r120 aaaab
+
+#700
+r120 aaaaa
+r0 aaaab
+
+#720
+r0 aaaaa
+r-120 aaaab
+
+#740
+r-120 aaaaa
+r-234 aaaab
+
+#760
+r-234 aaaaa
+r-456 aaaab
+
+#780
+r-120 aaaaa
+r-768 aaaab
+
+#790
+r0 aaaac
+r-768 aaaad
+
+#810
+r1449.984008789062 aaaac
+r-443.5433044433594 aaaad
+
+#830
+r768 aaaac
+r672 aaaad
+
+#850
+r297.9839782714844 aaaac
+r916.7207641601562 aaaad
+
+#870
+r0 aaaac
+r768 aaaad
+
+#890
+r-297.9839782714844 aaaac
+r659.5432739257812 aaaad
+
+#910
+r-768 aaaac
+r672 aaaad
+
+#930
+r-1449.984008789062 aaaac
+r1171.279174804688 aaaad
+
+#960
+r123 aaaaa
+r29 aaaab
+
+#980
+r34 aaaaa
+r34 aaaab
+
+#1000
+r-23 aaaaa
+r85 aaaab
+
+#1020
+r12 aaaaa
+r206 aaaab
+
+#1040
+r45 aaaaa
+r336 aaaab
+
+#1060
+r0 aaaaa
+r593 aaaab
+
+#1080
+r67 aaaaa
+r823 aaaab
+
+#1100
+r134 aaaaa
+r422 aaaab
+
+#1110
+r392 aaaac
+r2528 aaaad
+
+#1130
+r-1097.699096679688 aaaac
+r-397.3122253417969 aaaad
+
+#1150
+r123 aaaac
+r-431 aaaad
+
+#1170
+r157.68359375 aaaac
+r-92.23697662353516 aaaad
+
+#1190
+r32 aaaac
+r18 aaaad
+
+#1210
+r-222.3009033203125 aaaac
+r-36.68777084350586 aaaad
+
+#1230
+r125 aaaac
+r-655 aaaad
+
+#1250
+r1474.31640625 aaaac
+r-701.7630004882812 aaaad
 
 #2000

@@ -10,9 +10,6 @@ SC_MODULE(TOP)
 {
   // signals
   sc_clock clk;
-  sc_signal<float> data_in;
-  sc_signal<float> data_out;
-
 
   sc_signal<bool> data_valid_source;
   sc_signal<bool> data_req_source;
