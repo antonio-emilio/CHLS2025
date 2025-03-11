@@ -7,7 +7,7 @@ HEA= $(SRC:.cpp=.h)
 CC=g++
 
 #on CentOS
-SYSTEMC=/opt/systemc
+SYSTEMC=/usr/local/bin/Siemens_EDA/Catapult_Synthesis_2022.2_1-1019737/Mgc_home
 #on Ubuntu
 #SYSTEMC=/usr/home/enstb1/ELEC/SystemC-2.3.3/systemc-2.3.3
 #SYSTEMC=/opt/systemc-2.3.3
