@@ -27,9 +27,17 @@ SC_MODULE(TOP) {
 
   SC_CTOR(TOP)
       : clk("clk", 10, SC_NS, 0.5),
-        FFT1("FFT_PROCESS"),
-        SOURCE1("SOURCE_PROCESS"),
-        SINK1("SINK_PROCESS") {
+      fft_sink_real("fft_sink_real", 16),
+      fft_sink_imag("fft_sink_imag", 16),
+      fft_source_real("fft_source_real", 16),
+      fft_source_imag("fft_source_imag", 16),
+      data_valid_source("data_valid_source"),
+      data_req_source("data_req_source"),
+      data_valid_sink("data_valid_sink"),
+      data_req_sink("data_req_sink"),
+      FFT1("FFT_PROCESS"),
+      SOURCE1("SOURCE_PROCESS"),
+      SINK1("SINK_PROCESS") {
     SOURCE1.clk(clk);
     SOURCE1.out_real(fft_source_real);
     SOURCE1.out_imag(fft_source_imag);
