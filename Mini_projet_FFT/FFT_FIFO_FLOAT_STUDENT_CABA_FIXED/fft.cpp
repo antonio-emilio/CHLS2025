@@ -4,10 +4,10 @@
 complex_t weights[4] = W;
 
 void FFT::but(complex_t *weight, complex_t *in0, complex_t *in1, complex_t *out0, complex_t *out1) {
-    ac_fixed<46, 36, true> temp_real, temp_imag;
+    ac_fixed<46, 36, true, AC_RND_CONV, AC_SAT> temp_real, temp_imag;
     
-    temp_real = (in1->real * weight->real - in1->imag * weight->imag) / 32;
-    temp_imag = (in1->real * weight->imag + in1->imag * weight->real) / 32;
+    temp_real = (in1->real * weight->real - in1->imag * weight->imag) >> 5; 
+    temp_imag = (in1->real * weight->imag + in1->imag * weight->real) >> 5;  
 
     out0->real = in0->real + temp_real;
     out0->imag = in0->imag + temp_imag;

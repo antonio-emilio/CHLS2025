@@ -12,9 +12,10 @@
 }
 
 struct complex_s {
-    ac_fixed<23, 18, true> real;
-    ac_fixed<23, 18, true> imag;
+    ac_fixed<23, 18, true, AC_RND_CONV, AC_SAT> real;
+    ac_fixed<23, 18, true, AC_RND_CONV, AC_SAT> imag;
 };
+
 
 typedef struct complex_s complex_t;
 

@@ -22,12 +22,12 @@ void SOURCE::COMPORTEMENT() {
         }
         else if (data_req.read() && !sent) {
             cout << "[SOURCE] Envoi de données." << endl;
-            int real, imag;
+            double real, imag; // Mudamos para double para preservar precisão
             realStream >> real;
             imagStream >> imag;
 
-            out_real.write(real * 32); // Escalonamento para ponto fixo
-            out_imag.write(imag * 32);
+            out_real.write(real); // Removemos a multiplicação por 32
+            out_imag.write(imag);
             data_valid.write(true);
             sent = true;
         } else {

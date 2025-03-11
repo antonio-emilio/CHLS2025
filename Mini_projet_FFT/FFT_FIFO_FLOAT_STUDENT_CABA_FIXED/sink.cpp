@@ -17,13 +17,13 @@ void SINK::COMPORTEMENT() {
 
     while (true) {
         if (data_valid.read()) {
-            ac_fixed<23, 18, true> real = in_real.read();
-            ac_fixed<23, 18, true> imag = in_imag.read();
+            ac_fixed<23, 18, true, AC_RND_CONV, AC_SAT> real = in_real.read();
+            ac_fixed<23, 18, true, AC_RND_CONV, AC_SAT> imag = in_imag.read();
 
             cout << "[SINK] Écriture de données dans des fichiers." << endl;
 
-            realStream << (real / 32) << std::endl; // Ajuste para ponto fixo
-            imagStream << (imag / 32) << std::endl;
+            realStream << real.to_double() << std::endl; // Usamos to_double() para precisão correta
+            imagStream << imag.to_double() << std::endl;
 
             data_req.write(true);
         } else {
