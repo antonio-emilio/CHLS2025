@@ -32,6 +32,10 @@ SC_MODULE(TOP)
         fft_sink_imag("fft_sink_imag", 16),
         fft_source_real("fft_source_real", 16),
         fft_source_imag("fft_source_imag", 16),
+        data_valid_source("data_valid_source"),
+        data_req_source("data_req_source"),
+        data_valid_sink("data_valid_sink"),
+        data_req_sink("data_req_sink"),
         FFT1("FFT_PROCESS"),
         SOURCE1("SOURCE_PROCESS"),
         SINK1("SINK_PROCESS")
