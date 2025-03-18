@@ -27,4 +27,7 @@ go libraries
 
 directive set -CLOCKS {clk {-CLOCK_PERIOD 10.0 }}
 go assembly
+
+directive set /top_level/fft/while -PIPELINE_INIT_INTERVAL 1
+
 go extract
