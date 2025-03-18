@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue Mar 18 16:02:58 2025
+# Process ID: 54692
+# Current directory: /homes/a24perei/github/CHLS2025/Mini_projet_FFT/FFT_FIFO_FLOAT_STUDENT_CABA_FIXED/Filtre_NexysVideo_STUDENT/proj/AudioProc.runs/synth_1
+# Command line: vivado -log FFT.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source FFT.tcl
+# Log file: /homes/a24perei/github/CHLS2025/Mini_projet_FFT/FFT_FIFO_FLOAT_STUDENT_CABA_FIXED/Filtre_NexysVideo_STUDENT/proj/AudioProc.runs/synth_1/FFT.vds
+# Journal file: /homes/a24perei/github/CHLS2025/Mini_projet_FFT/FFT_FIFO_FLOAT_STUDENT_CABA_FIXED/Filtre_NexysVideo_STUDENT/proj/AudioProc.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source FFT.tcl -notrace

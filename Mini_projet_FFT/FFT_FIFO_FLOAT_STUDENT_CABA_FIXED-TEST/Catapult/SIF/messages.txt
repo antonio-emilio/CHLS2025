@@ -1,0 +1,26 @@
+
+# Messages from "go new"
+
+
+# Messages from "go analyze"
+
+flow package require /SCVerify
+10.4
+solution file add [file join $sfd source.cpp] -type C++
+/INPUTFILES/1
+solution file add [file join $sfd sink.cpp] -type C++
+/INPUTFILES/2
+solution file add [file join $sfd fft.cpp] -type C++
+/INPUTFILES/3
+solution file add [file join $sfd main.cpp] -type C++ -exclude true
+/INPUTFILES/4
+go analyze
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+Creating project directory '/home/HLS_student/Catapult_12/'. (PRJ-1)
+Front End called with arguments: -I/usr/local/bin/Siemens_EDA/Catapult_Synthesis_2022.2_1-1019737/Mgc_home/shared/include -- /mnt/campux/github/CHLS2025/Mini_projet_FFT/FFT_FIFO_FLOAT_STUDENT_CABA_FIXED/fft.cpp /mnt/campux/github/CHLS2025/Mini_projet_FFT/FFT_FIFO_FLOAT_STUDENT_CABA_FIXED/sink.cpp /mnt/campux/github/CHLS2025/Mini_projet_FFT/FFT_FIFO_FLOAT_STUDENT_CABA_FIXED/source.cpp (CIN-69)
+Edison Design Group C++/C Front End - Version 6.3 (CIN-1)
+# Warning: Command-line warning #1819-D: "/usr/local/bin/Siemens_EDA/Catapult_Synthesis_2022.2_1-1019737/Mgc_home/shared/include" was specified as both a system and non-system include directory -- the non-system entry will be ignored ()
+# Warning: last line of file ends without a newline (CRD-1)
+Pragma 'hls_design<top>' detected on class 'FFT' (CIN-6)
+Source file analysis completed (CIN-68)
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 18.37 seconds, memory usage 2230600kB, peak memory usage 2361672kB (SOL-9)

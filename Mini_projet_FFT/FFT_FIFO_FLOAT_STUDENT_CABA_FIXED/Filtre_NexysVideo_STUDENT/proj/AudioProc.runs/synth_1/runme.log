@@ -1,0 +1,234 @@
+
+*** Running vivado
+    with args -log FFT.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source FFT.tcl
+
+
+****** Vivado v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source FFT.tcl -notrace
+Command: synth_design -top FFT -part xc7vx485tffg1157-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx485t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx485t'
+INFO: [Common 17-1540] The version limit for your license is '2024.01' and has expired for new software. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 54749
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 2383.754 ; gain = 0.000 ; free physical = 2328 ; free virtual = 13574
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'FFT' [/homes/a24perei/github/CHLS2025/Mini_projet_FFT/FFT_FIFO_FLOAT_STUDENT_CABA_FIXED/Filtre_NexysVideo_STUDENT/src/hdl/rtl.vhdl:2521]
+INFO: [Synth 8-3491] module 'FFT_COMPORTEMENT' declared at '/homes/a24perei/github/CHLS2025/Mini_projet_FFT/FFT_FIFO_FLOAT_STUDENT_CABA_FIXED/Filtre_NexysVideo_STUDENT/src/hdl/rtl.vhdl:94' bound to instance 'FFT_COMPORTEMENT_inst' of component 'FFT_COMPORTEMENT' [/homes/a24perei/github/CHLS2025/Mini_projet_FFT/FFT_FIFO_FLOAT_STUDENT_CABA_FIXED/Filtre_NexysVideo_STUDENT/src/hdl/rtl.vhdl:2543]
+INFO: [Synth 8-638] synthesizing module 'FFT_COMPORTEMENT' [/homes/a24perei/github/CHLS2025/Mini_projet_FFT/FFT_FIFO_FLOAT_STUDENT_CABA_FIXED/Filtre_NexysVideo_STUDENT/src/hdl/rtl.vhdl:108]
+INFO: [Synth 8-3491] module 'FFT_COMPORTEMENT_COMPORTEMENT_fsm' declared at '/homes/a24perei/github/CHLS2025/Mini_projet_FFT/FFT_FIFO_FLOAT_STUDENT_CABA_FIXED/Filtre_NexysVideo_STUDENT/src/hdl/rtl.vhdl:21' bound to instance 'FFT_COMPORTEMENT_COMPORTEMENT_fsm_inst' of component 'FFT_COMPORTEMENT_COMPORTEMENT_fsm' [/homes/a24perei/github/CHLS2025/Mini_projet_FFT/FFT_FIFO_FLOAT_STUDENT_CABA_FIXED/Filtre_NexysVideo_STUDENT/src/hdl/rtl.vhdl:859]
+INFO: [Synth 8-638] synthesizing module 'FFT_COMPORTEMENT_COMPORTEMENT_fsm' [/homes/a24perei/github/CHLS2025/Mini_projet_FFT/FFT_FIFO_FLOAT_STUDENT_CABA_FIXED/Filtre_NexysVideo_STUDENT/src/hdl/rtl.vhdl:29]
+INFO: [Synth 8-256] done synthesizing module 'FFT_COMPORTEMENT_COMPORTEMENT_fsm' (1#1) [/homes/a24perei/github/CHLS2025/Mini_projet_FFT/FFT_FIFO_FLOAT_STUDENT_CABA_FIXED/Filtre_NexysVideo_STUDENT/src/hdl/rtl.vhdl:29]
+INFO: [Synth 8-256] done synthesizing module 'FFT_COMPORTEMENT' (2#1) [/homes/a24perei/github/CHLS2025/Mini_projet_FFT/FFT_FIFO_FLOAT_STUDENT_CABA_FIXED/Filtre_NexysVideo_STUDENT/src/hdl/rtl.vhdl:108]
+INFO: [Synth 8-256] done synthesizing module 'FFT' (3#1) [/homes/a24perei/github/CHLS2025/Mini_projet_FFT/FFT_FIFO_FLOAT_STUDENT_CABA_FIXED/Filtre_NexysVideo_STUDENT/src/hdl/rtl.vhdl:2521]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 2383.754 ; gain = 0.000 ; free physical = 2334 ; free virtual = 13517
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 2383.754 ; gain = 0.000 ; free physical = 2344 ; free virtual = 13528
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7vx485tffg1157-1
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7vx485tffg1157-1
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 2391.758 ; gain = 8.004 ; free physical = 2361 ; free virtual = 13545
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_var_reg' in module 'FFT_COMPORTEMENT_COMPORTEMENT_fsm'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                        000000001 |                             0000
+*
+               while_c_1 |                        000000010 |                             0001
+               while_c_2 |                        000000100 |                             0010
+               while_c_3 |                        000001000 |                             0011
+               while_c_4 |                        000010000 |                             0100
+               while_c_5 |                        000100000 |                             0101
+               while_c_6 |                        001000000 |                             0110
+               while_c_7 |                        010000000 |                             0111
+               while_c_8 |                        100000000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_var_reg' using encoding 'one-hot' in module 'FFT_COMPORTEMENT_COMPORTEMENT_fsm'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 2391.758 ; gain = 8.004 ; free physical = 2328 ; free virtual = 13533
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input   47 Bit       Adders := 4     
+	   2 Input   42 Bit       Adders := 32    
+	   3 Input   42 Bit       Adders := 20    
+	   2 Input   32 Bit       Adders := 1     
+	   2 Input   30 Bit       Adders := 3     
+	   3 Input   28 Bit       Adders := 2     
+	   2 Input   28 Bit       Adders := 2     
+	   2 Input   24 Bit       Adders := 3     
++---Registers : 
+	               28 Bit    Registers := 6     
+	               27 Bit    Registers := 2     
+	               23 Bit    Registers := 16    
+	               21 Bit    Registers := 37    
+	                3 Bit    Registers := 2     
+	                1 Bit    Registers := 103   
++---Muxes : 
+	   2 Input   28 Bit        Muxes := 2     
+	   2 Input   23 Bit        Muxes := 16    
+	   2 Input   21 Bit        Muxes := 100   
+	   9 Input    9 Bit        Muxes := 2     
+	   2 Input    4 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 9     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 2800 (col length:140)
+BRAMs: 2060 (col length: RAMB18 140 RAMB36 70)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:36 . Memory (MB): peak = 2499.430 ; gain = 115.676 ; free physical = 1972 ; free virtual = 13257
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:37 . Memory (MB): peak = 2502.398 ; gain = 118.645 ; free physical = 1972 ; free virtual = 13257
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:37 . Memory (MB): peak = 2510.406 ; gain = 126.652 ; free physical = 1942 ; free virtual = 13228
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:39 . Memory (MB): peak = 2510.406 ; gain = 126.652 ; free physical = 1939 ; free virtual = 13225
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:39 . Memory (MB): peak = 2510.406 ; gain = 126.652 ; free physical = 1940 ; free virtual = 13226
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:39 . Memory (MB): peak = 2510.406 ; gain = 126.652 ; free physical = 1940 ; free virtual = 13226
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:39 . Memory (MB): peak = 2510.406 ; gain = 126.652 ; free physical = 1940 ; free virtual = 13226
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:39 . Memory (MB): peak = 2510.406 ; gain = 126.652 ; free physical = 1940 ; free virtual = 13226
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:39 . Memory (MB): peak = 2510.406 ; gain = 126.652 ; free physical = 1940 ; free virtual = 13226
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |   484|
+|3     |LUT1   |   263|
+|4     |LUT2   |   582|
+|5     |LUT3   |   940|
+|6     |LUT4   |   214|
+|7     |LUT5   |   597|
+|8     |LUT6   |   844|
+|9     |MUXF7  |    24|
+|10    |FDCE   |   163|
+|11    |FDRE   |  1266|
+|12    |FDSE   |    65|
+|13    |IBUF   |    49|
+|14    |OBUF   |    48|
++------+-------+------+
+
+Report Instance Areas: 
++------+-------------------------------------------+----------------------------------+------+
+|      |Instance                                   |Module                            |Cells |
++------+-------------------------------------------+----------------------------------+------+
+|1     |top                                        |                                  |  5540|
+|2     |  FFT_COMPORTEMENT_inst                    |FFT_COMPORTEMENT                  |  5442|
+|3     |    FFT_COMPORTEMENT_COMPORTEMENT_fsm_inst |FFT_COMPORTEMENT_COMPORTEMENT_fsm |   283|
++------+-------------------------------------------+----------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:39 . Memory (MB): peak = 2510.406 ; gain = 126.652 ; free physical = 1940 ; free virtual = 13226
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:39 . Memory (MB): peak = 2510.406 ; gain = 126.652 ; free physical = 1955 ; free virtual = 13242
+Synthesis Optimization Complete : Time (s): cpu = 00:00:15 ; elapsed = 00:00:39 . Memory (MB): peak = 2510.414 ; gain = 126.652 ; free physical = 1961 ; free virtual = 13248
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.10 . Memory (MB): peak = 2513.375 ; gain = 0.000 ; free physical = 2050 ; free virtual = 13340
+INFO: [Netlist 29-17] Analyzing 508 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'FFT' is not ideal for floorplanning, since the cellview 'FFT_COMPORTEMENT' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2608.215 ; gain = 0.000 ; free physical = 1987 ; free virtual = 13289
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+23 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:44 . Memory (MB): peak = 2608.215 ; gain = 230.516 ; free physical = 2104 ; free virtual = 13406
+INFO: [Common 17-1381] The checkpoint '/homes/a24perei/github/CHLS2025/Mini_projet_FFT/FFT_FIFO_FLOAT_STUDENT_CABA_FIXED/Filtre_NexysVideo_STUDENT/proj/AudioProc.runs/synth_1/FFT.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file FFT_utilization_synth.rpt -pb FFT_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 18 16:04:01 2025...

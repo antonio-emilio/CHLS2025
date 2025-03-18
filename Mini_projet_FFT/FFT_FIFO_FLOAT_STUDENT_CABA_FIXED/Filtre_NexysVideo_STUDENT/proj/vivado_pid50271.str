@@ -1,0 +1,91 @@
+/*
+
+Xilinx Vivado v2018.2 (64-bit) [Major: 2018, Minor: 2]
+SW Build: 2258646 on Thu Jun 14 20:02:38 MDT 2018
+IP Build: 2256618 on Thu Jun 14 22:10:49 MDT 2018
+
+Process ID: 50271
+License: Customer
+
+Current time: 	Tue Mar 18 15:40:44 CET 2025
+Time zone: 	Central European Time (Europe/Paris)
+
+OS: Ubuntu
+OS Version: 6.8.0-54-generic
+OS Architecture: amd64
+Available processors (cores): 12
+
+Display: :0
+Screen size: 1680x1050
+Screen resolution (DPI): 95
+Available screens: 1
+Available disk space: 46 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	/usr/home/enstb1/Xilinx/Vivado2018.2/Vivado/2018.2/tps/lnx64/jre
+Java executable location: 	/usr/home/enstb1/Xilinx/Vivado2018.2/Vivado/2018.2/tps/lnx64/jre/bin/java
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 2 GB
+
+
+User name: 	a24perei
+User home directory: /homes/a24perei
+User working directory: /homes/a24perei/github/CHLS2025/Mini_projet_FFT/FFT_FIFO_FLOAT_STUDENT_CABA_FIXED/Filtre_NexysVideo_STUDENT/proj
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /usr/home/enstb1/Xilinx/Vivado2018.2/Vivado
+HDI_APPROOT: /usr/home/enstb1/Xilinx/Vivado2018.2/Vivado/2018.2
+RDI_DATADIR: /usr/home/enstb1/Xilinx/Vivado2018.2/Vivado/2018.2/data
+RDI_BINDIR: /usr/home/enstb1/Xilinx/Vivado2018.2/Vivado/2018.2/bin
+
+Vivado preferences file location: /homes/a24perei/.Xilinx/Vivado/2018.2/vivado.xml
+Vivado preferences directory: /homes/a24perei/.Xilinx/Vivado/2018.2/
+Vivado layouts directory: /homes/a24perei/.Xilinx/Vivado/2018.2/layouts
+PlanAhead jar file location: 	/usr/home/enstb1/Xilinx/Vivado2018.2/Vivado/2018.2/lib/classes/planAhead.jar
+Vivado log file location: 	/homes/a24perei/github/CHLS2025/Mini_projet_FFT/FFT_FIFO_FLOAT_STUDENT_CABA_FIXED/Filtre_NexysVideo_STUDENT/proj/vivado.log
+Vivado journal file location: 	/homes/a24perei/github/CHLS2025/Mini_projet_FFT/FFT_FIFO_FLOAT_STUDENT_CABA_FIXED/Filtre_NexysVideo_STUDENT/proj/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-50271-fl-tp-br-105
+
+Xilinx Environment Variables
+----------------------------
+XILINX: /usr/home/enstb1/Xilinx/Vivado2018.2/Vivado/2018.2/ids_lite/ISE
+XILINXD_LICENSE_FILE: 27007@licence-01.imta.fr
+XILINX_DSP: /usr/home/enstb1/Xilinx/Vivado2018.2/Vivado/2018.2/ids_lite/ISE
+XILINX_PLANAHEAD: /usr/home/enstb1/Xilinx/Vivado2018.2/Vivado/2018.2
+XILINX_SDK: /usr/home/enstb1/Xilinx/Vivado2018.2/SDK/2018.2
+XILINX_VIVADO: /usr/home/enstb1/Xilinx/Vivado2018.2/Vivado/2018.2
+XILINX_VIVADO_HLS: /usr/home/enstb1/Xilinx/Vivado2018.2/Vivado/2018.2
+
+
+GUI allocated memory:	154 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 921 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// [GUI Memory]: 54 MB (+53723kb) [00:00:15]
+// [Engine Memory]: 874 MB (+764828kb) [00:00:15]
+// Tcl Message: start_gui 
+// [GUI Memory]: 62 MB (+6236kb) [00:00:19]
+// [Engine Memory]: 921 MB (+3781kb) [00:00:19]
+// HMemoryUtils.trashcanNow. Engine heap size: 921 MB. GUI used memory: 41 MB. Current time: 3/18/25 3:40:47 PM CET
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // aa (ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // V (q, ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V (q, ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // V (q, ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // V (q, ck)
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // V (q, ck)
+selectMenuItem(RDIResourceCommand.RDICommands_RUN_SCRIPT, "Run Tcl Script..."); // ad (ck)
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // V (q, ck)
+// Run Command: RDIResourceCommand.RDICommands_RUN_SCRIPT
+// [GUI Memory]: 68 MB (+2563kb) [00:00:34]

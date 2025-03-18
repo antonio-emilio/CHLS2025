@@ -19,8 +19,10 @@ struct complex_s {
 
 typedef struct complex_s complex_t;
 
+#pragma hls_design top
 SC_MODULE(FFT) {
     sc_in<bool> clk;
+    sc_in<bool> rst;
     sc_in<ac_fixed<23, 18, true>> in_real;
     sc_in<ac_fixed<23, 18, true>> in_imag;
     sc_out<ac_fixed<23, 18, true>> out_real;
@@ -39,9 +41,11 @@ SC_MODULE(FFT) {
     SC_CTOR(FFT) {
         SC_THREAD(COMPORTEMENT);
         sensitive << clk.pos();
+        async_reset_signal_is(rst, false);
     }
 
     void COMPORTEMENT();
+    void RESET();
     void but(complex_t *weight, complex_t *in0, complex_t *in1, complex_t *out0, complex_t *out1);
 };
 
