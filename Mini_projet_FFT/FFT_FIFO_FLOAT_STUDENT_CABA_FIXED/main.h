@@ -11,7 +11,7 @@
 SC_MODULE(TOP) {
   // signals
   sc_clock clk;
-
+  sc_signal<bool> rst;
   sc_signal<bool> data_valid_source;
   sc_signal<bool> data_req_source;
   sc_signal<bool> data_valid_sink;
@@ -39,6 +39,7 @@ SC_MODULE(TOP) {
     SOURCE1.data_req(data_req_source);
 
     FFT1.clk(clk);
+    FFT1.rst(rst);
     FFT1.in_real(fft_source_real);
     FFT1.in_imag(fft_source_imag);
     FFT1.out_real(fft_sink_real);

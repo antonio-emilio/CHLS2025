@@ -4,16 +4,16 @@
 #include <ac_sc.h>
 #include <ac_fixed.h>
 
-#define W { \
-    {32, 0}, \
-    {22, -22}, \
-    {0, -32}, \
-    {-22, -22} \
+#define W {\
+	{1, 0}, \
+	{0.7071067812, -0.7071067812}, \
+	{0, -1}, \
+	{-0.7071067812, -0.7071067812}\
 }
 
 struct complex_s {
-    ac_fixed<23, 18, true, AC_RND_CONV, AC_SAT> real;
-    ac_fixed<23, 18, true, AC_RND_CONV, AC_SAT> imag;
+    ac_fixed<26,19, true, AC_RND_CONV, AC_SAT> real;
+    ac_fixed<26,19, true, AC_RND_CONV, AC_SAT> imag;
 };
 
 
@@ -41,7 +41,7 @@ SC_MODULE(FFT) {
     SC_CTOR(FFT) {
         SC_THREAD(COMPORTEMENT);
         sensitive << clk.pos();
-        async_reset_signal_is(rst, false);
+        async_reset_signal_is(rst, true);
     }
 
     void COMPORTEMENT();
