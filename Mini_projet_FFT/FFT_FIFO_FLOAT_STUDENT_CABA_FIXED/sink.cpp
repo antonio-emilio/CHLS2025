@@ -1,4 +1,3 @@
-/* fichier sink.cpp */
 #include "sink.h"
 #include <fstream>
 #include <iostream>
@@ -18,7 +17,7 @@ void SINK::COMPORTEMENT() {
     while (true) {
         if (data_valid.read()) {
             ac_fixed<23, 18, true, AC_RND_CONV, AC_SAT> real = in_real.read(); //Rounding with conversion 
-            ac_fixed<23, 18, true, AC_RND_CONV, AC_SAT> imag = in_imag.read(); //Rounding with conversion
+            ac_fixed<23, 18, true, AC_RND_CONV, AC_SAT> imag = in_imag.read(); 
 
             cout << "[SINK] Écriture de données dans des fichiers." << endl;
 

@@ -32,7 +32,7 @@ SC_MODULE(FFT) {
     sc_out<bool> data_req_source;
 
     sc_out<bool> data_valid_sink;
-    sc_in<bool> data_req_sink;
+    sc_in<bool> data_req_sink; // not used
 
     int i = 0;
     int j = 0;

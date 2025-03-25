@@ -1,4 +1,3 @@
-/* fichier source.cpp */
 #include "source.h"
 #include <fstream>
 #include <iostream>
@@ -22,11 +21,11 @@ void SOURCE::COMPORTEMENT() {
         }
         else if (data_req.read() && !sent) {
             cout << "[SOURCE] Envoi de données." << endl;
-            double real, imag; // Mudamos para double para preservar precisão
+            double real, imag; 
             realStream >> real;
             imagStream >> imag;
 
-            out_real.write(real); // Removemos a multiplicação por 32
+            out_real.write(real);
             out_imag.write(imag);
             data_valid.write(true);
             sent = true;

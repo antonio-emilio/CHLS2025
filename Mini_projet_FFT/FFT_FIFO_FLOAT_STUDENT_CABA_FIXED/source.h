@@ -1,4 +1,3 @@
-/* fichier source.h */
 #ifndef SOURCE_H
 #define SOURCE_H
 

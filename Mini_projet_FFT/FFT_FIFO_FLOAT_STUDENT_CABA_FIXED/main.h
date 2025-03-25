@@ -1,5 +1,3 @@
-//  main.h
-
 #include <systemc.h>
 #include <ac_sc.h>
 #include "source.h"
@@ -9,7 +7,7 @@
 #define L 16
 
 SC_MODULE(TOP) {
-  // signals
+
   sc_clock clk;
   sc_signal<bool> rst;
   sc_signal<bool> data_valid_source;
@@ -22,7 +20,6 @@ SC_MODULE(TOP) {
   sc_signal<ac_fixed<23, 18, true>> fft_sink_real;
   sc_signal<ac_fixed<23, 18, true>> fft_sink_imag;
 
-  // instanciate
   SOURCE SOURCE1;
   FFT FFT1;
   SINK SINK1;

@@ -1,4 +1,3 @@
-/* fichier fft.cpp */
 #include "fft.h"
 
 const complex_t weights[4] = W;
