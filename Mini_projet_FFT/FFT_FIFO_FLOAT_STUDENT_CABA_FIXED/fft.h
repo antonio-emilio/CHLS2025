@@ -46,7 +46,11 @@ SC_MODULE(FFT) {
 
     void COMPORTEMENT();
     void RESET();
-    void but(complex_t *weight, complex_t *in0, complex_t *in1, complex_t *out0, complex_t *out1);
+    void but(const complex_t *weight, complex_t *in0, complex_t *in1, complex_t *out0, complex_t *out1);
+    void FFT8S(
+        complex_t input_fft[8],
+        complex_t output_fft[8],
+        const complex_t weights[4]);
 };
 
 #endif

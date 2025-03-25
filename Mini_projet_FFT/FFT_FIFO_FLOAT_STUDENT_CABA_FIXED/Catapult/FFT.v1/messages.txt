@@ -6,24 +6,23 @@
 
 flow package require /SCVerify
 10.4
-solution file add [file join $sfd source.cpp] -type C++
-/INPUTFILES/1
-solution file add [file join $sfd sink.cpp] -type C++
-/INPUTFILES/2
 solution file add [file join $sfd fft.cpp] -type C++
-/INPUTFILES/3
-solution file add [file join $sfd main.cpp] -type C++ -exclude true
-/INPUTFILES/4
+/INPUTFILES/1
+solution file add [file join $sfd fft.h] -type C++
+/INPUTFILES/2
 go analyze
 # Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
-Creating project directory '/home/HLS_student/Catapult_12/'. (PRJ-1)
-Front End called with arguments: -I/usr/local/bin/Siemens_EDA/Catapult_Synthesis_2022.2_1-1019737/Mgc_home/shared/include -- /mnt/campux/github/CHLS2025/Mini_projet_FFT/FFT_FIFO_FLOAT_STUDENT_CABA_FIXED/fft.cpp /mnt/campux/github/CHLS2025/Mini_projet_FFT/FFT_FIFO_FLOAT_STUDENT_CABA_FIXED/sink.cpp /mnt/campux/github/CHLS2025/Mini_projet_FFT/FFT_FIFO_FLOAT_STUDENT_CABA_FIXED/source.cpp (CIN-69)
+Creating project directory '/home/HLS_student/Catapult_84/'. (PRJ-1)
+Front End called with arguments: -I/usr/local/bin/Siemens_EDA/Catapult_Synthesis_2022.2_1-1019737/Mgc_home/shared/include -- /mnt/campux/github/CHLS2025/Mini_projet_FFT/FFT_FIFO_FLOAT_STUDENT_CABA_FIXED/fft.h /mnt/campux/github/CHLS2025/Mini_projet_FFT/FFT_FIFO_FLOAT_STUDENT_CABA_FIXED/fft.cpp (CIN-69)
 Edison Design Group C++/C Front End - Version 6.3 (CIN-1)
 # Warning: Command-line warning #1819-D: "/usr/local/bin/Siemens_EDA/Catapult_Synthesis_2022.2_1-1019737/Mgc_home/shared/include" was specified as both a system and non-system include directory -- the non-system entry will be ignored ()
 # Warning: last line of file ends without a newline (CRD-1)
+# Warning: last line of file ends without a newline (CRD-1)
+# Warning:           detected during compilation of secondary translation unit "/mnt/campux/github/CHLS2025/Mini_projet_FFT/FFT_FIFO_FLOAT_STUDENT_CABA_FIXED/fft.cpp" (CRD-1)
+Pragma 'hls_design<top>' detected on class 'FFT' (CIN-6)
 Pragma 'hls_design<top>' detected on class 'FFT' (CIN-6)
 Source file analysis completed (CIN-68)
-# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 18.37 seconds, memory usage 2230600kB, peak memory usage 2361672kB (SOL-9)
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 13.30 seconds, memory usage 2140092kB, peak memory usage 2205628kB (SOL-9)
 # Info: Project was written to disk. (PRJ-10)
 
 # Messages from "go compile"
@@ -47,42 +46,10 @@ Inlining member function 'sc_core::sc_inout<bool>::read' on object 'data_req_sou
 Inlining member function 'sc_core::sc_inout<bool>::write' on object 'data_req_source' (CIN-64)
 Inlining member function 'sc_core::sc_inout<bool>::write' on object 'data_req_source' (CIN-64)
 Inlining member function 'sc_core::sc_inout<bool>::write' on object 'data_req_source' (CIN-64)
+Inlining member function 'FFT::FFT8S' on object '' (CIN-64)
 Inlining member function 'FFT::but' on object '' (CIN-64)
-Inlining routine 'operator>><47, 37, true, AC_TRN, AC_WRAP>' (CIN-14)
-Inlining routine 'operator>><47, 37, true, AC_TRN, AC_WRAP>' (CIN-14)
 Inlining member function 'FFT::but' on object '' (CIN-64)
-Inlining routine 'operator>><47, 37, true, AC_TRN, AC_WRAP>' (CIN-14)
-Inlining routine 'operator>><47, 37, true, AC_TRN, AC_WRAP>' (CIN-14)
 Inlining member function 'FFT::but' on object '' (CIN-64)
-Inlining routine 'operator>><47, 37, true, AC_TRN, AC_WRAP>' (CIN-14)
-Inlining routine 'operator>><47, 37, true, AC_TRN, AC_WRAP>' (CIN-14)
-Inlining member function 'FFT::but' on object '' (CIN-64)
-Inlining routine 'operator>><47, 37, true, AC_TRN, AC_WRAP>' (CIN-14)
-Inlining routine 'operator>><47, 37, true, AC_TRN, AC_WRAP>' (CIN-14)
-Inlining member function 'FFT::but' on object '' (CIN-64)
-Inlining routine 'operator>><47, 37, true, AC_TRN, AC_WRAP>' (CIN-14)
-Inlining routine 'operator>><47, 37, true, AC_TRN, AC_WRAP>' (CIN-14)
-Inlining member function 'FFT::but' on object '' (CIN-64)
-Inlining routine 'operator>><47, 37, true, AC_TRN, AC_WRAP>' (CIN-14)
-Inlining routine 'operator>><47, 37, true, AC_TRN, AC_WRAP>' (CIN-14)
-Inlining member function 'FFT::but' on object '' (CIN-64)
-Inlining routine 'operator>><47, 37, true, AC_TRN, AC_WRAP>' (CIN-14)
-Inlining routine 'operator>><47, 37, true, AC_TRN, AC_WRAP>' (CIN-14)
-Inlining member function 'FFT::but' on object '' (CIN-64)
-Inlining routine 'operator>><47, 37, true, AC_TRN, AC_WRAP>' (CIN-14)
-Inlining routine 'operator>><47, 37, true, AC_TRN, AC_WRAP>' (CIN-14)
-Inlining member function 'FFT::but' on object '' (CIN-64)
-Inlining routine 'operator>><47, 37, true, AC_TRN, AC_WRAP>' (CIN-14)
-Inlining routine 'operator>><47, 37, true, AC_TRN, AC_WRAP>' (CIN-14)
-Inlining member function 'FFT::but' on object '' (CIN-64)
-Inlining routine 'operator>><47, 37, true, AC_TRN, AC_WRAP>' (CIN-14)
-Inlining routine 'operator>><47, 37, true, AC_TRN, AC_WRAP>' (CIN-14)
-Inlining member function 'FFT::but' on object '' (CIN-64)
-Inlining routine 'operator>><47, 37, true, AC_TRN, AC_WRAP>' (CIN-14)
-Inlining routine 'operator>><47, 37, true, AC_TRN, AC_WRAP>' (CIN-14)
-Inlining member function 'FFT::but' on object '' (CIN-64)
-Inlining routine 'operator>><47, 37, true, AC_TRN, AC_WRAP>' (CIN-14)
-Inlining routine 'operator>><47, 37, true, AC_TRN, AC_WRAP>' (CIN-14)
 Inlining member function 'sc_core::sc_inout<bool>::write' on object 'data_valid_sink' (CIN-64)
 Inlining member function 'sc_core::sc_inout<bool>::read' on object 'data_valid_sink' (CIN-64)
 Inlining member function 'sc_core::sc_inout<ac_fixed<23, 18, true, AC_TRN, AC_WRAP>>::write' on object 'out_real' (CIN-64)
@@ -90,7 +57,19 @@ Inlining member function 'sc_core::sc_inout<ac_fixed<23, 18, true, AC_TRN, AC_WR
 Inlining member function 'sc_core::sc_inout<bool>::write' on object 'data_valid_sink' (CIN-64)
 Inlining member function 'sc_core::sc_inout<bool>::write' on object 'data_valid_sink' (CIN-64)
 Optimizing block '/FFT' ... (CIN-4)
+# Warning: Reducing the number of bits used to represent array elements of 'output_fft.real', from '26' bits to '23' bits. (MEM-87)
+# Warning: Reducing the number of bits used to represent array elements of 'output_fft.imag', from '26' bits to '23' bits. (MEM-87)
 # Info: Partition '/FFT/SC_CTOR' is found empty and is optimized away. (OPT-12)
+# Warning: Reducing the number of bits used to represent array elements of 'FFT::FFT8S:index1.rom', from '128' bits to '8' bits. (MEM-87)
+# Warning: Reducing the number of bits used to represent array elements of 'FFT::FFT8S:index2.rom', from '32' bits to '3' bits. (MEM-87)
+# Warning: Reducing the number of bits used to represent array elements of 'FFT::FFT8S:index3.rom', from '128' bits to '8' bits. (MEM-87)
+Loop '/FFT/COMPORTEMENT/BUT_S1' iterated at most 4 times. (LOOP-2)
+Loop '/FFT/COMPORTEMENT/BUT_S2' iterated at most 4 times. (LOOP-2)
+Loop '/FFT/COMPORTEMENT/BUT_S3' iterated at most 4 times. (LOOP-2)
+# Warning: Reducing the number of bits used to represent array elements of 'weights.imag.rom#3', from '52' bits to '1' bits. (MEM-87)
+# Warning: Reducing the number of bits used to represent array elements of 'weights.real.rom#3', from '52' bits to '1' bits. (MEM-87)
+# Warning: Reducing the number of bits used to represent array elements of 'weights.imag.rom#4', from '26' bits to '4' bits. (MEM-87)
+# Warning: Reducing the number of bits used to represent array elements of 'weights.real.rom#4', from '26' bits to '9' bits. (MEM-87)
 # Warning: SystemC thread 'COMPORTEMENT' should be scheduled with 'iomode=fixed' since it writes to sc_signal 'out_real'. (CIN-124)
 # Warning: SystemC thread 'COMPORTEMENT' should be scheduled with 'iomode=fixed' since it writes to sc_signal 'out_real'. (CIN-124)
 # Warning: SystemC thread 'COMPORTEMENT' should be scheduled with 'iomode=fixed' since it writes to sc_signal 'out_imag'. (CIN-124)
@@ -107,9 +86,9 @@ Design 'FFT' was read (SOL-1)
 Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
 Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_msim.mk'
 # Warning: Toplevel found in header /mnt/campux/github/CHLS2025/Mini_projet_FFT/FFT_FIFO_FLOAT_STUDENT_CABA_FIXED/fft.h, using /mnt/campux/github/CHLS2025/Mini_projet_FFT/FFT_FIFO_FLOAT_STUDENT_CABA_FIXED/fft.cpp for header dependencies.
-# Info: CDesignChecker Shell script written to '/home/HLS_student/Catapult_12/FFT.v1/CDesignChecker/design_checker.sh'
-# Info: Completed transformation 'compile' on solution 'FFT.v1': elapsed time 17.85 seconds, memory usage 2230600kB, peak memory usage 2361672kB (SOL-9)
-# Info: Design complexity at end of 'compile': Total ops = 3239, Real ops = 652, Vars = 283 (SOL-21)
+# Info: CDesignChecker Shell script written to '/home/HLS_student/Catapult_84/FFT.v1/CDesignChecker/design_checker.sh'
+# Info: Completed transformation 'compile' on solution 'FFT.v1': elapsed time 8.15 seconds, memory usage 2140092kB, peak memory usage 2205628kB (SOL-9)
+# Info: Design complexity at end of 'compile': Total ops = 517, Real ops = 182, Vars = 111 (SOL-21)
 
 # Messages from "go libraries"
 
@@ -126,8 +105,8 @@ Reading component library '$MGC_HOME/pkgs/cds_assert/assert_mods.lib' [assert_mo
 Reading component library '$MGC_HOME/pkgs/siflibs/ccs_connections.lib' [ccs_connections]... (LIB-49)
 Reading component library '$MGC_HOME/pkgs/ccs_xilinx/mgc_Xilinx-ARTIX-7-3_beh.lib' [mgc_Xilinx-ARTIX-7-3_beh]... (LIB-49)
 Reading component library '$MGC_HOME/pkgs/ccs_xilinx/Xilinx_RAMS.lib' [Xilinx_RAMS]... (LIB-49)
-# Info: Completed transformation 'libraries' on solution 'FFT.v1': elapsed time 0.67 seconds, memory usage 2230600kB, peak memory usage 2361672kB (SOL-9)
-# Info: Design complexity at end of 'libraries': Total ops = 3239, Real ops = 652, Vars = 283 (SOL-21)
+# Info: Completed transformation 'libraries' on solution 'FFT.v1': elapsed time 0.75 seconds, memory usage 2140092kB, peak memory usage 2205628kB (SOL-9)
+# Info: Design complexity at end of 'libraries': Total ops = 517, Real ops = 182, Vars = 111 (SOL-21)
 
 # Messages from "go assembly"
 
@@ -136,31 +115,42 @@ directive set -CLOCKS {clk {-CLOCK_PERIOD 10.0 }}
 /CLOCKS {clk {-CLOCK_PERIOD 10.0 }}
 go assembly
 # Info: Starting transformation 'assembly' on solution 'FFT.v1' (SOL-8)
-# Info: Completed transformation 'assembly' on solution 'FFT.v1': elapsed time 3.29 seconds, memory usage 2230600kB, peak memory usage 2361672kB (SOL-9)
-# Info: Design complexity at end of 'assembly': Total ops = 3239, Real ops = 652, Vars = 283 (SOL-21)
+# Info: Completed transformation 'assembly' on solution 'FFT.v1': elapsed time 0.70 seconds, memory usage 2140092kB, peak memory usage 2205628kB (SOL-9)
+# Info: Design complexity at end of 'assembly': Total ops = 517, Real ops = 182, Vars = 111 (SOL-21)
 
 # Messages from "go architect"
 
 # Info: Project was written to disk. (PRJ-10)
+directive set /FFT/COMPORTEMENT/while -PIPELINE_INIT_INTERVAL 1
+/FFT/COMPORTEMENT/while/PIPELINE_INIT_INTERVAL 1
+directive set /FFT/COMPORTEMENT/while/BUT_S1 -UNROLL yes
+/FFT/COMPORTEMENT/while/BUT_S1/UNROLL yes
+directive set /FFT/COMPORTEMENT/while/BUT_S2 -UNROLL yes
+/FFT/COMPORTEMENT/while/BUT_S2/UNROLL yes
+directive set /FFT/COMPORTEMENT/while/BUT_S3 -UNROLL yes
+/FFT/COMPORTEMENT/while/BUT_S3/UNROLL yes
 go extract
 # Info: Starting transformation 'loops' on solution 'FFT.v1' (SOL-8)
+Loop '/FFT/COMPORTEMENT/BUT_S1' is being fully unrolled (4 times). (LOOP-7)
+Loop '/FFT/COMPORTEMENT/BUT_S2' is being fully unrolled (4 times). (LOOP-7)
+Loop '/FFT/COMPORTEMENT/BUT_S3' is being fully unrolled (4 times). (LOOP-7)
 Loop '/FFT/COMPORTEMENT/while' is left rolled. (LOOP-4)
-# Info: Completed transformation 'loops' on solution 'FFT.v1': elapsed time 1.74 seconds, memory usage 2230600kB, peak memory usage 2361672kB (SOL-9)
-# Info: Design complexity at end of 'loops': Total ops = 3239, Real ops = 652, Vars = 283 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'FFT.v1': elapsed time 3.32 seconds, memory usage 2140092kB, peak memory usage 2205628kB (SOL-9)
+# Info: Design complexity at end of 'loops': Total ops = 1243, Real ops = 540, Vars = 222 (SOL-21)
 # Info: Project was written to disk. (PRJ-10)
 # Info: Starting transformation 'memories' on solution 'FFT.v1' (SOL-8)
-# Info: Completed transformation 'memories' on solution 'FFT.v1': elapsed time 7.50 seconds, memory usage 2230600kB, peak memory usage 2361672kB (SOL-9)
-# Info: Design complexity at end of 'memories': Total ops = 3190, Real ops = 677, Vars = 338 (SOL-21)
+# Info: Completed transformation 'memories' on solution 'FFT.v1': elapsed time 2.56 seconds, memory usage 2140092kB, peak memory usage 2205628kB (SOL-9)
+# Info: Design complexity at end of 'memories': Total ops = 1259, Real ops = 552, Vars = 240 (SOL-21)
 # Info: Project was written to disk. (PRJ-10)
 # Info: Starting transformation 'cluster' on solution 'FFT.v1' (SOL-8)
-# Info: Completed transformation 'cluster' on solution 'FFT.v1': elapsed time 0.16 seconds, memory usage 2230600kB, peak memory usage 2361672kB (SOL-9)
-# Info: Design complexity at end of 'cluster': Total ops = 3190, Real ops = 677, Vars = 338 (SOL-21)
+# Info: Completed transformation 'cluster' on solution 'FFT.v1': elapsed time 0.10 seconds, memory usage 2140092kB, peak memory usage 2205628kB (SOL-9)
+# Info: Design complexity at end of 'cluster': Total ops = 1259, Real ops = 552, Vars = 240 (SOL-21)
 # Info: Project was written to disk. (PRJ-10)
 # Info: Starting transformation 'architect' on solution 'FFT.v1' (SOL-8)
-Deleting operations after LOOP "while" fft.cpp(36,4,5) without exit (OPT-1)
-Design 'FFT' contains '764' real operations. (SOL-11)
-# Info: Completed transformation 'architect' on solution 'FFT.v1': elapsed time 3.76 seconds, memory usage 2230600kB, peak memory usage 2361672kB (SOL-9)
-# Info: Design complexity at end of 'architect': Total ops = 3541, Real ops = 764, Vars = 431 (SOL-21)
+Deleting operations after LOOP "while" fft.cpp(65,4,5) without exit (OPT-1)
+Design 'FFT' contains '568' real operations. (SOL-11)
+# Info: Completed transformation 'architect' on solution 'FFT.v1': elapsed time 3.07 seconds, memory usage 2140092kB, peak memory usage 2205628kB (SOL-9)
+# Info: Design complexity at end of 'architect': Total ops = 1500, Real ops = 568, Vars = 303 (SOL-21)
 
 # Messages from "go allocate"
 
@@ -172,56 +162,39 @@ Performing concurrent resource allocation and scheduling on '/FFT/COMPORTEMENT' 
 Prescheduled LOOP '/FFT/COMPORTEMENT/while' (4 c-steps) (SCHD-7)
 Prescheduled LOOP '/FFT/COMPORTEMENT/COMPORTEMENT:rlp' (0 c-steps) (SCHD-7)
 Prescheduled SEQUENTIAL '/FFT/COMPORTEMENT' (total length 4 c-steps) (SCHD-8)
-# Info: Initial schedule of SEQUENTIAL '/FFT/COMPORTEMENT': Latency = 4, Area (Datapath, Register, Total) = 9224.00, 0.00, 9224.00 (CRAAS-11)
+# Info: Initial schedule of SEQUENTIAL '/FFT/COMPORTEMENT': Latency = 4, Area (Datapath, Register, Total) = 12367.00, 0.00, 12367.00 (CRAAS-11)
 At least one feasible schedule exists. (CRAAS-9)
-Input operation 'while:else:if:if:asn(data_valid_source.svs)#1' moved from c-step 1 to c-step 2 to save registers (SCHD-49)
-Input operation 'while:else:if:if:asn(data_valid_source.svs)#1' moved from c-step 1 to c-step 3 to save registers (SCHD-49)
-Input operation 'while:else:if:if:asn(data_valid_source.svs)#1' moved from c-step 1 to c-step 4 to save registers (SCHD-49)
-Input operation 'while:else:if:if:asn(data_valid_source.svs)#1' moved from c-step 1 to c-step 5 to save registers (SCHD-49)
-Input operation 'while:else:if:if:asn(data_valid_source.svs)#1' moved from c-step 1 to c-step 6 to save registers (SCHD-49)
-Input operation 'while:else:if:if:asn(data_valid_source.svs)#1' moved from c-step 1 to c-step 7 to save registers (SCHD-49)
-Input operation 'while:else:if:if:asn(data_valid_source.svs)#1' moved from c-step 1 to c-step 8 to save registers (SCHD-49)
-Input operation 'while:else:if:if:asn(data_valid_source.svs)#1' moved from c-step 1 to c-step 9 to save registers (SCHD-49)
-Input operation 'while:else:if:if#1:asn' moved from c-step 1 to c-step 2 to save registers (SCHD-49)
-Input operation 'while:else:if:if#1:asn#9' moved from c-step 1 to c-step 2 to save registers (SCHD-49)
-Input operation 'while:else:aelse#3:asn' moved from c-step 1 to c-step 2 to save registers (SCHD-49)
-Input operation 'while:else:aelse#3:asn' moved from c-step 1 to c-step 3 to save registers (SCHD-49)
-Input operation 'while:else:aelse#3:asn' moved from c-step 1 to c-step 4 to save registers (SCHD-49)
-Input operation 'while:else:aelse#3:asn' moved from c-step 1 to c-step 5 to save registers (SCHD-49)
-Input operation 'while:else:aelse#3:asn' moved from c-step 1 to c-step 6 to save registers (SCHD-49)
-Input operation 'while:else:aelse#3:asn' moved from c-step 1 to c-step 7 to save registers (SCHD-49)
-Input operation 'while:else:aelse#3:asn' moved from c-step 1 to c-step 8 to save registers (SCHD-49)
-Input operation 'while:else:aelse#3:asn' moved from c-step 1 to c-step 9 to save registers (SCHD-49)
-# Info: Final schedule of SEQUENTIAL '/FFT/COMPORTEMENT': Latency = 9, Area (Datapath, Register, Total) = 6224.00, 0.00, 6224.00 (CRAAS-12)
+# Info: Final schedule of SEQUENTIAL '/FFT/COMPORTEMENT': Latency = 4, Area (Datapath, Register, Total) = 12367.00, 0.00, 12367.00 (CRAAS-12)
 Resource allocation and scheduling done. (CRAAS-2)
 Netlist written to file 'schedule.gnt' (NET-4)
-# Info: Completed transformation 'allocate' on solution 'FFT.v1': elapsed time 2.28 seconds, memory usage 2230600kB, peak memory usage 2361672kB (SOL-9)
-# Info: Design complexity at end of 'allocate': Total ops = 3541, Real ops = 764, Vars = 431 (SOL-21)
+# Info: Completed transformation 'allocate' on solution 'FFT.v1': elapsed time 0.89 seconds, memory usage 2140092kB, peak memory usage 2205628kB (SOL-9)
+# Info: Design complexity at end of 'allocate': Total ops = 1500, Real ops = 568, Vars = 303 (SOL-21)
 
 # Messages from "go schedule"
 
 # Info: Project was written to disk. (PRJ-10)
 # Info: Starting transformation 'schedule' on solution 'FFT.v1' (SOL-8)
 Performing concurrent resource allocation and scheduling on '/FFT/COMPORTEMENT' (CRAAS-1)
+# Info: Loop '/FFT/COMPORTEMENT/while' is pipelined with initiation interval 1 and no flushing (SCHD-43)
 Report written to file 'cycle.rpt'
-# Info: Completed transformation 'schedule' on solution 'FFT.v1': elapsed time 8.66 seconds, memory usage 2230600kB, peak memory usage 2361672kB (SOL-9)
-# Info: Design complexity at end of 'schedule': Total ops = 3244, Real ops = 699, Vars = 385 (SOL-21)
+# Info: Completed transformation 'schedule' on solution 'FFT.v1': elapsed time 5.26 seconds, memory usage 2140092kB, peak memory usage 2205628kB (SOL-9)
+# Info: Design complexity at end of 'schedule': Total ops = 1630, Real ops = 594, Vars = 569 (SOL-21)
 
 # Messages from "go dpfsm"
 
 # Info: Project was written to disk. (PRJ-10)
 # Info: Starting transformation 'dpfsm' on solution 'FFT.v1' (SOL-8)
 Performing FSM extraction... (FSM-1)
-# Info: Completed transformation 'dpfsm' on solution 'FFT.v1': elapsed time 3.66 seconds, memory usage 2230600kB, peak memory usage 2361672kB (SOL-9)
-# Info: Design complexity at end of 'dpfsm': Total ops = 4016, Real ops = 1346, Vars = 482 (SOL-21)
+# Info: Completed transformation 'dpfsm' on solution 'FFT.v1': elapsed time 2.66 seconds, memory usage 2140092kB, peak memory usage 2205628kB (SOL-9)
+# Info: Design complexity at end of 'dpfsm': Total ops = 1651, Real ops = 979, Vars = 446 (SOL-21)
 
 # Messages from "go extract"
 
 # Info: Project was written to disk. (PRJ-10)
 # Info: Starting transformation 'instance' on solution 'FFT.v1' (SOL-8)
 Netlist written to file 'schematic.nlv' (NET-4)
-# Info: Completed transformation 'instance' on solution 'FFT.v1': elapsed time 2.96 seconds, memory usage 2230600kB, peak memory usage 2361672kB (SOL-9)
-# Info: Design complexity at end of 'instance': Total ops = 3610, Real ops = 991, Vars = 3600 (SOL-21)
+# Info: Completed transformation 'instance' on solution 'FFT.v1': elapsed time 1.94 seconds, memory usage 2140092kB, peak memory usage 2205628kB (SOL-9)
+# Info: Design complexity at end of 'instance': Total ops = 1461, Real ops = 789, Vars = 1467 (SOL-21)
 # Info: Project was written to disk. (PRJ-10)
 # Info: Starting transformation 'extract' on solution 'FFT.v1' (SOL-8)
 Report written to file 'rtl.rpt'
@@ -229,12 +202,12 @@ Netlist written to file 'rtl.vhdl' (NET-4)
 generate concat
 order file name is: rtl.vhdl_order.txt
 Add dependent file: ./rtl.vhdl
-Finished writing concatenated file: /home/HLS_student/Catapult_12/FFT.v1/concat_rtl.vhdl
+Finished writing concatenated file: /home/HLS_student/Catapult_84/FFT.v1/concat_rtl.vhdl
 order file name is: rtl.vhdl_order_sim.txt
 Add dependent file: ./rtl.vhdl
-Finished writing concatenated simulation file: /home/HLS_student/Catapult_12/FFT.v1/concat_sim_rtl.vhdl
+Finished writing concatenated simulation file: /home/HLS_student/Catapult_84/FFT.v1/concat_sim_rtl.vhdl
 Generating SCVerify SystemC wrapper
-# Info: Wrote wave database file to /home/HLS_student/Catapult_12/FFT.v1/scverify/ccs_wave_signals.dat
+# Info: Wrote wave database file to /home/HLS_student/Catapult_84/FFT.v1/scverify/ccs_wave_signals.dat
 Makefile for RTL VHDL written to file './scverify/Verify_rtl_vhdl_msim.mk'
 # Info: Xilinx Vivado synthesis script written to 'vivado_vhdl/rtl.vhdl.xv'
 # Info: Xilinx Vivado synthesis script written to 'vivado_concat_vhdl/concat_rtl.vhdl.xv'
@@ -243,13 +216,13 @@ Netlist written to file 'rtl.v' (NET-4)
 generate concat
 order file name is: rtl.v_order.txt
 Add dependent file: ./rtl.v
-Finished writing concatenated file: /home/HLS_student/Catapult_12/FFT.v1/concat_rtl.v
+Finished writing concatenated file: /home/HLS_student/Catapult_84/FFT.v1/concat_rtl.v
 order file name is: rtl.v_order_sim.txt
 Add dependent file: ./rtl.v
-Finished writing concatenated simulation file: /home/HLS_student/Catapult_12/FFT.v1/concat_sim_rtl.v
+Finished writing concatenated simulation file: /home/HLS_student/Catapult_84/FFT.v1/concat_sim_rtl.v
 Makefile for RTL Verilog written to file './scverify/Verify_rtl_v_msim.mk'
 # Info: Xilinx Vivado synthesis script written to 'vivado_v/rtl.v.xv'
 # Info: Xilinx Vivado synthesis script written to 'vivado_concat_v/concat_rtl.v.xv'
 Makefile for Concat concat_sim_rtl Verilog written to file './scverify/Verify_concat_sim_rtl_v_msim.mk'
-# Info: Completed transformation 'extract' on solution 'FFT.v1': elapsed time 8.32 seconds, memory usage 2230600kB, peak memory usage 2361672kB (SOL-9)
-# Info: Design complexity at end of 'extract': Total ops = 3602, Real ops = 992, Vars = 457 (SOL-21)
+# Info: Completed transformation 'extract' on solution 'FFT.v1': elapsed time 6.80 seconds, memory usage 2140092kB, peak memory usage 2205628kB (SOL-9)
+# Info: Design complexity at end of 'extract': Total ops = 1493, Real ops = 797, Vars = 433 (SOL-21)

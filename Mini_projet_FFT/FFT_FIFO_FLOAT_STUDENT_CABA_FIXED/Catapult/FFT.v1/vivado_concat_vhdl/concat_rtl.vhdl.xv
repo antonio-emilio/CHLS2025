@@ -14,26 +14,26 @@ puts "-- Requested 4 fractional digits for design 'FFT' timing"
 puts "-- Requested 4 fractional digits for design 'FFT' capacitance"
 puts "-- Characterization mode: p2p "
 
-puts "-- Synthesis Timing report: '/home/HLS_student/Catapult_12/FFT.v1/vivado_concat_vhdl/timing_summary_synth.rpt' "
-puts "-- Synthesis Utilization report: '/home/HLS_student/Catapult_12/FFT.v1/vivado_concat_vhdl/utilization_synth.rpt' "
+puts "-- Synthesis Timing report: '/home/HLS_student/Catapult_84/FFT.v1/vivado_concat_vhdl/timing_summary_synth.rpt' "
+puts "-- Synthesis Utilization report: '/home/HLS_student/Catapult_84/FFT.v1/vivado_concat_vhdl/utilization_synth.rpt' "
 if { ([info exists env(Xilinx_RUN_PNR)] && $env(Xilinx_RUN_PNR) ) || 
      ([info exists env(Xilinx_BITGEN)] && $env(Xilinx_BITGEN) ) } {
-puts "-- Routed Timing report: '/home/HLS_student/Catapult_12/FFT.v1/vivado_concat_vhdl/timing_summary_routed.rpt' "
-puts "-- Routed Utilization report: '/home/HLS_student/Catapult_12/FFT.v1/vivado_concat_vhdl/utilization_placed.rpt' "
+puts "-- Routed Timing report: '/home/HLS_student/Catapult_84/FFT.v1/vivado_concat_vhdl/timing_summary_routed.rpt' "
+puts "-- Routed Utilization report: '/home/HLS_student/Catapult_84/FFT.v1/vivado_concat_vhdl/utilization_placed.rpt' "
 }
 
 # Environment variable settings
 global env
 set CATAPULT_HOME "/usr/local/bin/Siemens_EDA/Catapult_Synthesis_2022.2_1-1019737/Mgc_home"
 ## Set the variable for file path prefixing 
-set RTL_TOOL_SCRIPT_DIR /home/HLS_student/Catapult_12/FFT.v1/vivado_concat_vhdl
+set RTL_TOOL_SCRIPT_DIR /home/HLS_student/Catapult_84/FFT.v1/vivado_concat_vhdl
 set RTL_TOOL_SCRIPT_DIR [file dirname [file normalize [info script] ] ]
 puts "-- RTL_TOOL_SCRIPT_DIR is set to '$RTL_TOOL_SCRIPT_DIR' "
 # Vivado Non-Project mode script starts here
 puts "==========================================="
 puts "Catapult driving Vivado in Non-Project mode"
 puts "==========================================="
-set outputDir /home/HLS_student/Catapult_12/FFT.v1/vivado_concat_vhdl
+set outputDir /home/HLS_student/Catapult_84/FFT.v1/vivado_concat_vhdl
 set outputDir $RTL_TOOL_SCRIPT_DIR
 #file mkdir $outputDir
 #
@@ -50,7 +50,7 @@ set_property part xc7a200tsbg484-3 [current_project]
 #
 synth_design   -cascade_dsp auto  -top FFT -part xc7a200tsbg484-3 -mode out_of_context  -include_dirs "" 
 write_checkpoint -force $outputDir/post_synth
-set viv_report_dir /home/HLS_student/Catapult_12/FFT.v1/vivado_concat_vhdl
+set viv_report_dir /home/HLS_student/Catapult_84/FFT.v1/vivado_concat_vhdl
 report_utilization -file $viv_report_dir/utilization_synth.rpt
 report_timing_summary -path_type summary -file $viv_report_dir/timing_summary_synth.rpt
 report_timing -nworst 1 -from [all_inputs] -to [all_outputs] -file $viv_report_dir/timing_summary_synth.rpt -append
@@ -63,7 +63,7 @@ if { ([info exists env(Xilinx_RUN_PNR)] && $env(Xilinx_RUN_PNR) ) ||
      ([info exists env(Xilinx_BITGEN)] && $env(Xilinx_BITGEN) ) } {
   opt_design
   place_design
-  read_xdc /home/HLS_student/Catapult_12/FFT.v1/vivado_concat_vhdl/concat_rtl.vhdl.xv.signoff.sdc
+  read_xdc /home/HLS_student/Catapult_84/FFT.v1/vivado_concat_vhdl/concat_rtl.vhdl.xv.signoff.sdc
   phys_opt_design
   write_checkpoint -force $outputDir/post_place
   route_design
@@ -73,7 +73,7 @@ if { ([info exists env(Xilinx_RUN_PNR)] && $env(Xilinx_RUN_PNR) ) ||
   if { [info exists env(Xilinx_BITGEN)] && $env(Xilinx_BITGEN) } {
     write_bitstream -force $outputDir/FFT.bit
   }
-   set viv_report_dir /home/HLS_student/Catapult_12/FFT.v1/vivado_concat_vhdl
+   set viv_report_dir /home/HLS_student/Catapult_84/FFT.v1/vivado_concat_vhdl
    report_design_analysis -congestion -complexity -file $viv_report_dir/design_analysis.rpt
    report_high_fanout_nets -timing -load_types -max_nets 100 -file $viv_report_dir/high_fanouts.rpt
    report_utilization -file $viv_report_dir/utilization_placed.rpt

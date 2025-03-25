@@ -1,9 +1,9 @@
 /* fichier fft.cpp */
 #include "fft.h"
 
-complex_t weights[4] = W;
+const complex_t weights[4] = W;
 
-void FFT::but(complex_t *weight, complex_t *in0, complex_t *in1, complex_t *out0, complex_t *out1) {
+void FFT::but(const complex_t *weight, complex_t *in0, complex_t *in1, complex_t *out0, complex_t *out1) {
     ac_fixed<26, 19, true, AC_RND_CONV, AC_SAT> temp_real, temp_imag;
 
     temp_real = (in1->real * weight->real - in1->imag * weight->imag);
@@ -29,10 +29,37 @@ void FFT::RESET()
     out_imag.write(0);
 }
 
+void FFT::FFT8S(
+    complex_t input_fft[8],
+    complex_t output_fft[8],
+    const complex_t weights[4])
+{
+    complex_t stage1[8], stage2[8];
+
+    cout << "[FFT] Exécution de la FFT..." << endl;
+    int index1[4][4] = {{0, 4, 0, 1}, {2, 6, 2, 3}, {1, 5, 4, 5}, {3, 7, 6, 7}};
+    BUT_S1:for (int k = 0; k < 4; k++)
+    {
+        but(&weights[0], &input_fft[index1[k][0]], &input_fft[index1[k][1]], &stage1[index1[k][2]], &stage1[index1[k][3]]);
+    }
+
+    int index2[4][4] = {{0, 2, 0, 2}, {1, 3, 1, 3}, {4, 6, 4, 6}, {5, 7, 5, 7}};
+    BUT_S2:for (int k = 0; k < 4; k++)
+    {
+        but(&weights[index2[0][k]], &stage1[index2[k][0]], &stage1[index2[k][1]], &stage2[index2[k][2]], &stage2[index2[k][3]]);
+    }
+
+    int index3[4][4] = {{0, 4, 0, 4}, {1, 5, 1, 5}, {2, 6, 2, 6}, {3, 7, 3, 7}};
+    BUT_S3:for (int k = 0; k < 4; k++)
+    {
+        but(&weights[k], &stage2[index3[k][0]], &stage2[index3[k][1]], &output_fft[index3[k][2]], &output_fft[index3[k][3]]);
+    }
+}
+
+#pragma HLS INLINE
 void FFT::COMPORTEMENT()
 {
-    complex_t input_fft[8], output_fft[8];
-    complex_t stage1[8], stage2[8];
+    static complex_t input_fft[8], output_fft[8];
     processing = false;
 
     while (true)
@@ -72,23 +99,7 @@ void FFT::COMPORTEMENT()
 
             if (i == 8 && !processing)
             {
-                cout << "[FFT] Exécution de la FFT..." << endl;
-
-                but(&weights[0], &input_fft[0], &input_fft[4], &stage1[0], &stage1[1]);
-                but(&weights[0], &input_fft[2], &input_fft[6], &stage1[2], &stage1[3]);
-                but(&weights[0], &input_fft[1], &input_fft[5], &stage1[4], &stage1[5]);
-                but(&weights[0], &input_fft[3], &input_fft[7], &stage1[6], &stage1[7]);
-
-                but(&weights[0], &stage1[0], &stage1[2], &stage2[0], &stage2[2]);
-                but(&weights[2], &stage1[1], &stage1[3], &stage2[1], &stage2[3]);
-                but(&weights[0], &stage1[4], &stage1[6], &stage2[4], &stage2[6]);
-                but(&weights[2], &stage1[5], &stage1[7], &stage2[5], &stage2[7]);
-
-                but(&weights[0], &stage2[0], &stage2[4], &output_fft[0], &output_fft[4]);
-                but(&weights[1], &stage2[1], &stage2[5], &output_fft[1], &output_fft[5]);
-                but(&weights[2], &stage2[2], &stage2[6], &output_fft[2], &output_fft[6]);
-                but(&weights[3], &stage2[3], &stage2[7], &output_fft[3], &output_fft[7]);
-
+                FFT8S(input_fft, output_fft, weights);
                 processing = true;
                 i = 0;
             }
@@ -103,6 +114,7 @@ void FFT::COMPORTEMENT()
 
             if (processing && j < 8 && !data_valid_sink.read())
             {
+                
                 cout << "[FFT] Envoi des données traitées..." << endl;
                 out_real.write(output_fft[j].real);
                 out_imag.write(output_fft[j].imag);
@@ -116,5 +128,5 @@ void FFT::COMPORTEMENT()
         }
 
         wait();
-    }
+    }//WHILE 
 }

@@ -19,10 +19,8 @@ solution options defaults
 solution options set /OnTheFly/VthAttributeType cell_lib
 solution options set /Input/TargetPlatform x86_64
 solution options set /Input/SearchPath /usr/local/bin/Siemens_EDA/Catapult_Synthesis_2022.2_1-1019737/Mgc_home/shared/include
-solution file add /mnt/campux/github/CHLS2025/Mini_projet_FFT/FFT_FIFO_FLOAT_STUDENT_CABA_FIXED/source.cpp -type C++
-solution file add /mnt/campux/github/CHLS2025/Mini_projet_FFT/FFT_FIFO_FLOAT_STUDENT_CABA_FIXED/sink.cpp -type C++
 solution file add /mnt/campux/github/CHLS2025/Mini_projet_FFT/FFT_FIFO_FLOAT_STUDENT_CABA_FIXED/fft.cpp -type C++
-solution file add /mnt/campux/github/CHLS2025/Mini_projet_FFT/FFT_FIFO_FLOAT_STUDENT_CABA_FIXED/main.cpp -type C++ -exclude true
+solution file add /mnt/campux/github/CHLS2025/Mini_projet_FFT/FFT_FIFO_FLOAT_STUDENT_CABA_FIXED/fft.h -type CHEADER
 directive set -DESIGN_GOAL area
 directive set -SPECULATE true
 directive set -MERGEABLE true
@@ -75,4 +73,9 @@ solution library add Xilinx_RAMS
 go libraries
 directive set -CLOCKS {clk {-CLOCK_PERIOD 10.0 -CLOCK_UNCERTAINTY 0.0 -CLOCK_HIGH_TIME 5.0}}
 go assembly
+directive set /FFT/COMPORTEMENT/while -PIPELINE_INIT_INTERVAL 1
+directive set /FFT/COMPORTEMENT/BUT_S1 -UNROLL yes
+directive set /FFT/COMPORTEMENT/BUT_S2 -UNROLL yes
+directive set /FFT/COMPORTEMENT/BUT_S3 -UNROLL yes
+go architect
 go extract

@@ -29,6 +29,8 @@ directive set -CLOCKS {clk {-CLOCK_PERIOD 10.0 }}
 go assembly
 
 directive set /FFT/COMPORTEMENT/while -PIPELINE_INIT_INTERVAL 1
-
+directive set /FFT/COMPORTEMENT/while/BUT_S1 -UNROLL yes
+directive set /FFT/COMPORTEMENT/while/BUT_S2 -UNROLL yes
+directive set /FFT/COMPORTEMENT/while/BUT_S3 -UNROLL yes
 
 go extract
